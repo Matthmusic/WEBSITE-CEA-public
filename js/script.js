@@ -217,7 +217,7 @@ class ContactFormManager {
 
         // Show loading state
         const submitBtn = this.form.querySelector('button[type="submit"]');
-        const originalText = submitBtn.innerHTML;
+        const originalChildren = Array.from(submitBtn.childNodes).filter(n => !n.classList?.contains('ripple'));
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
         submitBtn.disabled = true;
 
@@ -247,8 +247,8 @@ class ContactFormManager {
             console.error('Erreur lors de l\'envoi du formulaire:', error);
             this.showErrorMessage('Impossible de contacter le serveur. Veuillez réessayer.');
         } finally {
-            // Reset button
-            submitBtn.innerHTML = originalText;
+            submitBtn.innerHTML = '';
+            originalChildren.forEach(n => submitBtn.appendChild(n));
             submitBtn.disabled = false;
         }
     }
@@ -811,7 +811,11 @@ document.addEventListener('DOMContentLoaded', () => {
         glow.style.top  = `${e.clientY}px`;
     });
 
-    console.log('🚀 CEA Ingénierie website loaded successfully!');
+    fetch('data/version.json').then(r => r.json()).then(d => {
+        console.log(`🚀 CEA Ingénierie website loaded successfully! — v${d.version}`);
+    }).catch(() => {
+        console.log('🚀 CEA Ingénierie website loaded successfully!');
+    });
 });
 
 // Logo Nebula Collision System
