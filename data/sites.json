@@ -1,0 +1,262 @@
+[
+  {
+    "id": 1776408149145,
+    "slug": "aeroport-cdg-terminal-1",
+    "name": "Aéroport CDG - Terminal 1",
+    "partnerId": "1776343887130",
+    "category": "aeroportuaire",
+    "address": "Aéroport de Paris-Charles-de-Gaulle, Tremblay-en-France, Le Raincy, Seine-Saint-Denis, Île-de-France, France métropolitaine, 93290, France",
+    "latitude": 49.0068908,
+    "longitude": 2.571082
+  },
+  {
+    "id": 1776342303372,
+    "slug": "aeroport-charles-de-gaulle-paris",
+    "name": "Aéroport Charles De Gaulle - Paris",
+    "partnerId": null,
+    "category": "aeroportuaire",
+    "address": "Aéroport de Paris-Charles-de-Gaulle, Tremblay-en-France, Le Raincy, Seine-Saint-Denis, Île-de-France, France métropolitaine, 93290, France",
+    "latitude": 49.0068908,
+    "longitude": 2.571082
+  },
+  {
+    "id": 1776407933925,
+    "slug": "aeroport-d-orly",
+    "name": "Aéroport d'Orly",
+    "partnerId": "1776343887130",
+    "category": "",
+    "address": "Aéroport d'Orly, Avenue Ouest, Paray-Vieille-Poste, Palaiseau, Essonne, Île-de-France, France métropolitaine, 94390, France",
+    "latitude": 48.7284425,
+    "longitude": 2.362535
+  },
+  {
+    "id": 1776342303374,
+    "slug": "aeroport-de-beziers-cap-d-agde",
+    "name": "Aéroport de Béziers - Cap d'Agde",
+    "partnerId": null,
+    "category": "aeroportuaire",
+    "address": "Aéroport de Béziers - Cap d'Agde en Languedoc, D 37E17, Portiragnes, Béziers, Hérault, Occitanie, France métropolitaine, 34420, France",
+    "latitude": 43.3227155,
+    "longitude": 3.355448
+  },
+  {
+    "id": 1776342303369,
+    "slug": "aeroport-de-bordeaux",
+    "name": "Aéroport de Bordeaux",
+    "partnerId": null,
+    "category": "aeroportuaire",
+    "address": "Aéroport de Bordeaux-Mérignac, Piste d'Entraînement Conduite Poids-Lourds, Beaudésert, Mérignac, Bordeaux, Gironde, Nouvelle-Aquitaine, France métropolitaine, 33700, France",
+    "latitude": 44.8292748,
+    "longitude": -0.7125609
+  },
+  {
+    "id": 1776342303373,
+    "slug": "aeroport-de-chambery",
+    "name": "Aéroport de Chambery",
+    "partnerId": null,
+    "category": "aeroportuaire",
+    "address": "Aéroport, D 17, Voglans, Chambéry, Savoie, Auvergne-Rhône-Alpes, France métropolitaine, 73420, France",
+    "latitude": 45.6376854,
+    "longitude": 5.8932419
+  },
+  {
+    "id": 1776342303368,
+    "slug": "aeroport-de-lyon",
+    "name": "Aéroport de Lyon",
+    "partnerId": null,
+    "category": "aeroportuaire",
+    "address": "Aéroport Lyon Saint-Exupéry, Rond-Point de l'Asie, Colombier-Saugnieu, Lyon, Rhône, Auvergne-Rhône-Alpes, France métropolitaine, 69124, France",
+    "latitude": 45.7244237,
+    "longitude": 5.0865172
+  },
+  {
+    "id": 1776342303370,
+    "slug": "aeroport-de-nice",
+    "name": "Aéroport de Nice",
+    "partnerId": null,
+    "category": "aeroportuaire",
+    "address": "Aéroport de Nice-Côte d'Azur, Rue Costes et Bellonte, Nice, Alpes-Maritimes, Provence-Alpes-Côte d'Azur, France métropolitaine, 06206, France",
+    "latitude": 43.6598152,
+    "longitude": 7.213746
+  },
+  {
+    "id": 1776427138812,
+    "slug": "aeroport-de-strasbourg",
+    "name": "Aéroport de Strasbourg",
+    "partnerId": "1776427114916",
+    "category": "",
+    "address": "Aéroport International Strasbourg-Entzheim, Chemin d'Exploitation, Duppigheim, Molsheim, Bas-Rhin, Grand Est, France métropolitaine, 67120, France",
+    "latitude": 48.5388709,
+    "longitude": 7.6254457
+  },
+  {
+    "id": 1776427473248,
+    "slug": "aeroport-de-toulon-hyeres",
+    "name": "Aéroport de Toulon Hyères",
+    "partnerId": "3",
+    "category": "",
+    "address": "Aéroport, Hyères, Toulon, Var, Provence-Alpes-Côte d'Azur, France métropolitaine, 83400, France",
+    "latitude": 43.0903066,
+    "longitude": 6.1598358
+  },
+  {
+    "id": 1776853774599,
+    "slug": "aeroport-la-reunion-roland-garros",
+    "name": "Aéroport La Réunion Roland Garros",
+    "partnerId": "1776853741013",
+    "category": "",
+    "address": "Aéroport de la Réunion Roland-Garros, 74, Avenue Roland Garros, Rivière des Pluies, Sainte-Marie, Saint-Denis, La Réunion, 97438, France",
+    "latitude": -20.8902226,
+    "longitude": 55.5173184
+  },
+  {
+    "id": 1776342303371,
+    "slug": "c-c-i-port-de-nice",
+    "name": "C.C.I Port de Nice",
+    "partnerId": null,
+    "category": "portuaire",
+    "address": "Port de Nice, Carabacel, Nice, Alpes-Maritimes, Provence-Alpes-Côte d'Azur, France métropolitaine, France",
+    "latitude": 43.6941575,
+    "longitude": 7.2845515
+  },
+  {
+    "id": 1776409818094,
+    "slug": "casino-de-monte-carlo",
+    "name": "Casino de Monte Carlo",
+    "partnerId": "5",
+    "category": "",
+    "address": "Place du Casino, Monte-Carlo, Monaco",
+    "latitude": 43.7393583,
+    "longitude": 7.4278189
+  },
+  {
+    "id": 1776342303376,
+    "slug": "centre-de-donnees-haute-disponibilite",
+    "name": "Centre de Données Haute Disponibilité",
+    "partnerId": null,
+    "category": "datacenter",
+    "address": "",
+    "latitude": 0,
+    "longitude": 0
+  },
+  {
+    "id": 1776426167244,
+    "slug": "chi-frejus",
+    "name": "CHI Fréjus",
+    "partnerId": "11",
+    "category": "",
+    "address": "Centre hospitalier intercommunal Fréjus Saint-Raphaël, Allée des Demoiselles, Lotissement Alphonse Daudet, Fréjus, Draguignan, Var, Provence-Alpes-Côte d'Azur, France métropolitaine, 83600, France",
+    "latitude": 43.4390432,
+    "longitude": 6.7513044
+  },
+  {
+    "id": 1776342303379,
+    "slug": "conseil-general-06-tgbt-ginesy",
+    "name": "Conseil Général 06 - TGBT GINESY",
+    "partnerId": null,
+    "category": "public",
+    "address": "147 Bd du Mercantour, 06201 Nice",
+    "latitude": 43.6759275,
+    "longitude": 7.2006648
+  },
+  {
+    "id": 1776667479553,
+    "slug": "grand-hotel-du-cap-ferrat",
+    "name": "Grand Hotel du Cap Ferrat",
+    "partnerId": "1776667450033",
+    "category": "",
+    "address": "Grand Hôtel du Cap Ferrat, Avenue Dehouve - Voyenne, Saint-Jean-Cap-Ferrat, Nice, Alpes-Maritimes, Provence-Alpes-Côte d'Azur, France métropolitaine, 06230, France",
+    "latitude": 43.6769597,
+    "longitude": 7.3315163
+  },
+  {
+    "id": 1776342303380,
+    "slug": "hotel-3-14-cannes",
+    "name": "Hôtel 3.14 - CANNES",
+    "partnerId": null,
+    "category": "hotellerie",
+    "address": "Rue François Einesy, La Lepre, Cannes, Grasse, Alpes-Maritimes, Provence-Alpes-Côte d'Azur, France métropolitaine, 06407, France",
+    "latitude": 43.5500425,
+    "longitude": 7.0268203
+  },
+  {
+    "id": 1776342303375,
+    "slug": "kantys-clinique-saint-georges",
+    "name": "KANTYS - Clinique Saint-Georges",
+    "partnerId": null,
+    "category": "hospitalier",
+    "address": "Polyclinique Saint-George, 2, Avenue de Rimiez, Vallon des Fleurs, Rimiez, Nice, Alpes-Maritimes, Provence-Alpes-Côte d'Azur, France métropolitaine, 06730, France",
+    "latitude": 43.7331845,
+    "longitude": 7.2779556
+  },
+  {
+    "id": 1776342303378,
+    "slug": "metropole-nice-cote-d-azur-plaza",
+    "name": "Métropole Nice Côte d'Azur – Plaza",
+    "partnerId": null,
+    "category": "public",
+    "address": "Plaza, Boulevard René Cassin, Les Moulins, Caucade, Nice, Alpes-Maritimes, Provence-Alpes-Côte d'Azur, France métropolitaine, 06299, France",
+    "latitude": 43.6693346,
+    "longitude": 7.21469
+  },
+  {
+    "id": 1776419526824,
+    "slug": "palais-des-festivals-et-des-congres-de-cannes",
+    "name": "Palais des festivals et des congrés de Cannes",
+    "partnerId": "4",
+    "category": "",
+    "address": "Palais des Festivals et des Congrès, 1, Boulevard de la Croisette, La Lepre, Cannes, Grasse, Alpes-Maritimes, Provence-Alpes-Côte d'Azur, France métropolitaine, 06400, France",
+    "latitude": 43.5506849,
+    "longitude": 7.017658
+  },
+  {
+    "id": 1776425893628,
+    "slug": "pole-sante-saint-jean",
+    "name": "Pôle Santé Saint Jean",
+    "partnerId": "1776425831852",
+    "category": "",
+    "address": "Clinique Saint-Jean, Avenue des Alpes, Cagnes-sur-Mer, Grasse, Alpes-Maritimes, Provence-Alpes-Côte d'Azur, France métropolitaine, 06800, France",
+    "latitude": 43.6602057,
+    "longitude": 7.1369618
+  },
+  {
+    "id": 1776851599993,
+    "slug": "port-de-nice",
+    "name": "Port de Nice",
+    "partnerId": "6",
+    "category": "parking",
+    "address": "Nice Lympia, 6, Quai Papacino, Le Port, Carabacel, Nice, Alpes-Maritimes, Provence-Alpes-Côte d'Azur, France métropolitaine, 06300, France",
+    "latitude": 43.6976061,
+    "longitude": 7.2834978
+  },
+  {
+    "id": 1776342303377,
+    "slug": "tgbt-cheiron",
+    "name": "TGBT Cheiron",
+    "partnerId": null,
+    "category": "public",
+    "address": "Centre Administratif départemental - CADAM, Traverse Digue des Français, Nice, Alpes-Maritimes, Provence-Alpes-Côte d'Azur, France métropolitaine, 06700, France",
+    "latitude": 43.6732207,
+    "longitude": 7.1987671
+  },
+  {
+    "id": 1776426604594,
+    "slug": "vieux-port-de-cannes",
+    "name": "Vieux port de Cannes",
+    "partnerId": "8",
+    "category": "",
+    "address": "Port de Cannes - Vieux Port, Hautes Vallergues, Cannes, Grasse, Alpes-Maritimes, Provence-Alpes-Côte d'Azur, France métropolitaine, France",
+    "latitude": 43.5482221,
+    "longitude": 7.0147795
+  },
+  {
+    "id": 1777583344884,
+    "slug": "aeroport-du-luxembourg",
+    "name": "Aeroport du Luxembourg",
+    "partnerId": "1777583288814",
+    "category": "aeroportuaire",
+    "address": "Antibes, Grasse, Alpes-Maritimes, Provence-Alpes-Côte d'Azur, France métropolitaine, France",
+    "latitude": 43.5813878,
+    "longitude": 7.1236966
+  }
+]
