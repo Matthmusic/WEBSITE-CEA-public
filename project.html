@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>CEA Ingénierie - Détail projet</title>
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+</head>
+<body class="references-page-body">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html#accueil" aria-label="Retour à l'accueil">
+                    <img src="ico/CEAON.svg" alt="CEA Ingénierie" class="logo" id="navLogo">
+                </a>
+            </div>
+            <ul class="nav-menu" id="nav-menu-list">
+                <li class="nav-item"><a href="index.html#accueil" class="nav-link">Accueil</a></li>
+                <li class="nav-item"><a href="index.html#domaines" class="nav-link">Domaines</a></li>
+                <li class="nav-item"><a href="index.html#missions" class="nav-link">Missions</a></li>
+                <li class="nav-item"><a href="references.html" class="nav-link active">Références</a></li>
+                <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" aria-label="Changer de thème">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="hamburger" aria-controls="nav-menu-list" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="references-page-main">
+        <div class="container">
+            <div class="proj-page">
+                <div class="proj-page-left" id="projContent">
+                    <!-- injected by project.js -->
+                </div>
+                <div class="proj-page-right">
+                    <div id="projectGalleryGrid" class="project-bento"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="gallery-modal" class="gallery-modal">
+        <button class="gallery-close" aria-label="Fermer la galerie">&times;</button>
+        <button class="gallery-prev" aria-label="Image précédente">&#10094;</button>
+        <button class="gallery-next" aria-label="Image suivante">&#10095;</button>
+        <div class="gallery-content">
+            <img src="" alt="Image du projet" id="gallery-image">
+            <div id="gallery-caption" class="gallery-caption">
+                <span id="gallery-counter"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/nav.js" defer></script>
+    <script src="js/shared.js" defer></script>
+    <script src="js/project.js" defer></script>
+    <script src="js/ac-badge-three.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 60 });</script>
+</body>
+</html>

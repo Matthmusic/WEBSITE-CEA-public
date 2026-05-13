@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>CEA Ingénierie - Site</title>
+  <link rel="shortcut icon" href="ico/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+</head>
+<body class="references-page-body">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html#accueil" aria-label="Retour à l'accueil">
+                    <img src="ico/CEAON.svg" alt="CEA Ingénierie" class="logo" id="navLogo">
+                </a>
+            </div>
+            <ul class="nav-menu" id="nav-menu-list">
+                <li class="nav-item"><a href="index.html#accueil" class="nav-link">Accueil</a></li>
+                <li class="nav-item"><a href="index.html#domaines" class="nav-link">Domaines</a></li>
+                <li class="nav-item"><a href="index.html#missions" class="nav-link">Missions</a></li>
+                <li class="nav-item"><a href="references.html" class="nav-link active">Références</a></li>
+                <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item">
+                    <button class="theme-toggle" aria-label="Changer de thème">
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </li>
+            </ul>
+            <button class="hamburger" aria-controls="nav-menu-list" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+  <main class="references-page-main">
+    <div class="container">
+      <section class="references-page-hero">
+        <h1 id="siteTitle" class="section-title">Site</h1>
+        <a id="backToPartner" href="index.html#references" class="btn btn-secondary">Retour</a>
+      </section>
+      <section>
+        <div id="siteProjectsGrid" class="references-page-grid"></div>
+      </section>
+    </div>
+  </main>
+  <script src="js/nav.js" defer></script>
+  <script src="js/site.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 60 });</script>
+</body>
+</html>
