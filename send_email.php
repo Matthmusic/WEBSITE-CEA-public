@@ -17,10 +17,10 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 // Récupère et nettoie les données du formulaire
-$name = filter_var(trim($_POST['name'] ?? ''), FILTER_SANITIZE_STRING);
+$name = htmlspecialchars(trim($_POST['name'] ?? ''), ENT_QUOTES, 'UTF-8');
 $email = filter_var(trim($_POST['email'] ?? ''), FILTER_SANITIZE_EMAIL);
-$subject = filter_var(trim($_POST['subject'] ?? ''), FILTER_SANITIZE_STRING);
-$message = filter_var(trim($_POST['message'] ?? ''), FILTER_SANITIZE_STRING);
+$subject = htmlspecialchars(trim($_POST['subject'] ?? ''), ENT_QUOTES, 'UTF-8');
+$message = htmlspecialchars(trim($_POST['message'] ?? ''), ENT_QUOTES, 'UTF-8');
 
 // Validation côté serveur (essentiel pour la sécurité)
 if (empty($name) || empty($email) || empty($subject) || empty($message)) {
