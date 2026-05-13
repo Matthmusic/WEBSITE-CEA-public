@@ -1831,6 +1831,8 @@ async function initReferencesMap(references) {
         L.marker([43.6888260, 7.2301827], { icon: ceaIcon, zIndexOffset: 1000 })
             .bindPopup('<strong>CEA Ingénierie</strong><br>44 Boulevard Napoléon III<br>06200 Nice')
             .addTo(referencesMap);
+
+        initMapEasterEggs(referencesMap);
     }
 
     if (referencesMapLayer) {
@@ -2292,4 +2294,116 @@ function addScrollToTopButton() {
     callBtn.setAttribute('aria-label', 'Appeler CEA Ingénierie');
 
     document.body.appendChild(callBtn);
+}
+
+const EASTER_EGGS = [
+    { name: 'Arlo',    lat: 43.688651, lng: 7.230173,  img: 'images/arlo.jpg'  },
+    { name: 'Le Chat', lat: 43.690028, lng: 7.229250,  img: 'images/chat.jpg'  },
+];
+const EASTER_EGG_RADIUS_M = 80;
+const easterEggsFound = new Set();
+
+function initMapEasterEggs(map) {
+    const overlay = document.createElement('div');
+    overlay.id = 'easter-egg-overlay';
+    overlay.innerHTML = `
+        <div id="easter-egg-box">
+            <button id="easter-egg-close" aria-label="Fermer">✕</button>
+            <img id="easter-egg-img" src="" alt="">
+            <p id="easter-egg-msg"></p>
+        </div>`;
+    document.body.appendChild(overlay);
+
+    const style = document.createElement('style');
+    style.textContent = `
+        #easter-egg-overlay {
+            display: none; position: fixed; inset: 0;
+            background: rgba(0,0,0,.7); z-index: 99999;
+            align-items: center; justify-content: center;
+        }
+        #easter-egg-overlay.visible { display: flex; }
+        #easter-egg-box {
+            background: #1a1a1a; border: 2px solid var(--primary-orange, #ff9d5c);
+            border-radius: 16px; padding: 2rem; max-width: 420px; width: 90%;
+            text-align: center; position: relative; animation: eggPop .35s cubic-bezier(.16,1,.3,1);
+        }
+        @keyframes eggPop { from { transform: scale(.7); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+        #easter-egg-img { max-width: 100%; max-height: 300px; border-radius: 10px; margin-bottom: 1rem; object-fit: cover; }
+        #easter-egg-msg { color: #fff; font-size: 1.2rem; font-weight: 600; margin: 0; }
+        #easter-egg-msg span { color: var(--primary-orange, #ff9d5c); }
+        #easter-egg-close {
+            position: absolute; top: .75rem; right: .75rem;
+            background: none; border: none; color: #aaa; font-size: 1.2rem; cursor: pointer;
+        }
+        #easter-egg-close:hover { color: #fff; }
+    `;
+    document.head.appendChild(style);
+
+    document.getElementById('easter-egg-close').addEventListener('click', () => overlay.classList.remove('visible'));
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.classList.remove('visible'); });
+
+    map.on('click', (e) => {
+        for (const egg of EASTER_EGGS) {
+            const dist = e.latlng.distanceTo(L.latLng(egg.lat, egg.lng));
+            if (dist <= EASTER_EGG_RADIUS_M) {
+                const isNew = !easterEggsFound.has(egg.name);
+                if (isNew) easterEggsFound.add(egg.name);
+                document.getElementById('easter-egg-img').src = egg.img;
+                document.getElementById('easter-egg-img').alt = egg.name;
+                document.getElementById('easter-egg-msg').innerHTML =
+                    isNew ? `🎉 Bravo tu as trouvé <span>${egg.name}</span> !`
+                           : `Tu as encore trouvé <span>${egg.name}</span> !`;
+                overlay.classList.add('visible');
+                launchConfetti();
+                break;
+            }
+        }
+    });
+}
+
+function launchConfetti() {
+    const canvas = document.createElement('canvas');
+    canvas.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:100000';
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    document.body.appendChild(canvas);
+    const ctx = canvas.getContext('2d');
+
+    const COLORS = ['#ff9d5c','#ff6b35','#ffd700','#ff4d6d','#7fff00','#00cfff','#ff69b4','#fff'];
+    const particles = Array.from({ length: 140 }, () => ({
+        x: Math.random() * canvas.width,
+        y: -10 - Math.random() * 200,
+        r: 5 + Math.random() * 7,
+        color: COLORS[Math.floor(Math.random() * COLORS.length)],
+        angle: Math.random() * Math.PI * 2,
+        spin: (Math.random() - .5) * .2,
+        vx: (Math.random() - .5) * 4,
+        vy: 2 + Math.random() * 4,
+        shape: Math.random() > .5 ? 'rect' : 'circle',
+    }));
+
+    let frame;
+    const draw = () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        let alive = false;
+        for (const p of particles) {
+            p.x += p.vx;
+            p.y += p.vy;
+            p.vy += .12;
+            p.angle += p.spin;
+            if (p.y < canvas.height + 20) alive = true;
+            ctx.save();
+            ctx.translate(p.x, p.y);
+            ctx.rotate(p.angle);
+            ctx.fillStyle = p.color;
+            ctx.globalAlpha = Math.max(0, 1 - p.y / canvas.height);
+            if (p.shape === 'rect') ctx.fillRect(-p.r, -p.r / 2, p.r * 2, p.r);
+            else { ctx.beginPath(); ctx.arc(0, 0, p.r / 2, 0, Math.PI * 2); ctx.fill(); }
+            ctx.restore();
+        }
+        if (alive) frame = requestAnimationFrame(draw);
+        else canvas.remove();
+    };
+    frame = requestAnimationFrame(draw);
+    setTimeout(() => { cancelAnimationFrame(frame); canvas.remove(); }, 4000);
 }
