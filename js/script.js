@@ -811,6 +811,8 @@ document.addEventListener('DOMContentLoaded', () => {
         glow.style.top  = `${e.clientY}px`;
     });
 
+    if (window.AOS) AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 60 });
+
     fetch('data/version.json').then(r => r.json()).then(d => {
         console.log(`🚀 CEA Ingénierie website loaded successfully! — v${d.version}`);
     }).catch(() => {
