@@ -1,29 +1,16 @@
 (() => {
   const BADGE_SELECTOR = '.ac-iridescent-badge';
-  const THREE_CDN = 'https://unpkg.com/three@0.160.0/build/three.min.js';
+  const THREE_CDN = 'https://unpkg.com/three@0.160.0/build/three.module.min.js';
   const BADGE_TEXTURE = '/images/badges/h.png';
   const instances = new Map();
   let rafId = null;
   let io = null;
 
-  function loadThree() {
-    if (window.THREE) return Promise.resolve(window.THREE);
-    return new Promise((resolve, reject) => {
-      const existing = document.querySelector('script[data-ac-three-loader="1"]');
-      if (existing) {
-        existing.addEventListener('load', () => resolve(window.THREE), { once: true });
-        existing.addEventListener('error', reject, { once: true });
-        return;
-      }
-      const script = document.createElement('script');
-      script.src = THREE_CDN;
-      script.async = true;
-      script.defer = true;
-      script.dataset.acThreeLoader = '1';
-      script.onload = () => resolve(window.THREE);
-      script.onerror = reject;
-      document.head.appendChild(script);
-    });
+  async function loadThree() {
+    if (window.THREE) return window.THREE;
+    const mod = await import(THREE_CDN);
+    window.THREE = mod;
+    return mod;
   }
 
   function cleanupBadge(el) {

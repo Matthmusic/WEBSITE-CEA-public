@@ -1,0 +1,52 @@
+<IfModule mod_headers.c>
+    # Force HTTPS pendant 1 an (incluant sous-domaines) + éligibilité preload list
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+    # Anti-MIME sniffing
+    Header always set X-Content-Type-Options "nosniff"
+
+    # Anti-clickjacking
+    Header always set X-Frame-Options "DENY"
+
+    # XSS protection (navigateurs anciens)
+    Header always set X-XSS-Protection "1; mode=block"
+
+    # Politique de référent : URL complète en same-origin, origine seule en cross-origin
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Désactivation des APIs navigateur non utilisées
+    Header always set Permissions-Policy "camera=(), microphone=(), payment=(), usb=(), interest-cohort=()"
+
+    # Isolation fenêtres — allow-popups pour liens Google Maps / opqibi
+    Header always set Cross-Origin-Opener-Policy "same-origin-allow-popups"
+
+    # Ressources cross-origin autorisées (CDN images, fonts, tiles)
+    Header always set Cross-Origin-Resource-Policy "cross-origin"
+
+    # Content Security Policy
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' cdn.jsdelivr.net unpkg.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com cdnjs.cloudflare.com cdn.jsdelivr.net unpkg.com; font-src 'self' data: fonts.gstatic.com cdnjs.cloudflare.com; img-src 'self' data: blob: *.tile.openstreetmap.org *.basemaps.cartocdn.com; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; base-uri 'self';"
+</IfModule>
+
+# Redirection HTTP → HTTPS
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Cache statique : images, fonts, JS, CSS
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/webp            "access plus 6 months"
+    ExpiresByType image/png             "access plus 6 months"
+    ExpiresByType image/jpeg            "access plus 6 months"
+    ExpiresByType image/svg+xml         "access plus 6 months"
+    ExpiresByType font/woff2            "access plus 1 year"
+    ExpiresByType text/css              "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
+
+# Compression gzip
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+</IfModule>
