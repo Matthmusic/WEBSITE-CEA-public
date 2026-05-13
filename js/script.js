@@ -1252,10 +1252,11 @@ function initTrustTooltip() {
 
 async function loadTestimonials() {
     try {
-        const res = await fetch('/api/testimonials');
+        const res = await fetch('data/testimonials.json');
         if (!res.ok) return;
-        const data = await res.json();
-        if (!Array.isArray(data) || !data.length) return;
+        const all = await res.json();
+        const data = Array.isArray(all) ? all.filter(t => t.status === 'published') : [];
+        if (!data.length) return;
         const section = document.getElementById('temoignages');
         const grid = document.getElementById('temoignagesGrid');
         if (!section || !grid) return;
