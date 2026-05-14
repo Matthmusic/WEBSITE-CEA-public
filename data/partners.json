@@ -29,7 +29,7 @@
   {
     "id": 4,
     "name": "Palais des Festivals de Cannes",
-    "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu8OUOj3xK9NBu-HFqESgOKoHZABaVwCneHA&s",
+    "logo": "images/Confiance/palais-des-festivals-de-cannes.webp",
     "slug": "palais-des-festivals-de-cannes",
     "weight": 10,
     "certified": false,
@@ -47,7 +47,7 @@
   {
     "id": 6,
     "name": "Métropole Nice Côte d'Azur",
-    "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/b/bd/M%C3%A9tropole_NCA_Logo.svg/3840px-M%C3%A9tropole_NCA_Logo.svg.png",
+    "logo": "images/Confiance/metropole-nice-cote-d-azur.svg",
     "slug": "metropole-nice-cote-d-azur",
     "weight": 8,
     "certified": false,
@@ -128,7 +128,7 @@
   {
     "id": 1776260995811,
     "name": "Hospices Civils de Lyon",
-    "logo": "https://www.chu-lyon.fr/themes/custom/hcl/assets/images/logo.svg",
+    "logo": "images/Confiance/hospices-civils-de-lyon.svg",
     "slug": "hospices-civils-de-lyon",
     "weight": 5,
     "certified": false,
@@ -137,7 +137,7 @@
   {
     "id": 1776343887130,
     "name": "Aéroports de Paris",
-    "logo": "https://cdn-paso-back.pro.digital.cloud-adp.fr/back/upload/ADP_37dcdaa1fb.svg",
+    "logo": "images/Confiance/aeroports-de-paris.svg",
     "slug": "aeroports-de-paris",
     "weight": 10,
     "certified": true,
@@ -146,7 +146,7 @@
   {
     "id": 1776346002735,
     "name": "Aéroport Béziers Cap d'Agde",
-    "logo": "https://beziers.aeroport.fr/storage/logo-bleu.svg",
+    "logo": "images/Confiance/aeroport-beziers-cap-d-agde.svg",
     "slug": "aeroport-beziers-cap-d-agde",
     "weight": 3,
     "certified": false,
@@ -155,7 +155,7 @@
   {
     "id": 1776348471571,
     "name": "Aéroport Chambéry Savoie Mont Blanc",
-    "logo": "https://www.chambery-airport.com/themes/adl/images/logo-chambery-aeroport.svg",
+    "logo": "images/Confiance/aeroport-chambery-savoie-mont-blanc.svg",
     "slug": "aeroport-chambery-savoie-mont-blanc",
     "weight": 2,
     "certified": false,
@@ -164,7 +164,7 @@
   {
     "id": 1776407414405,
     "name": "Chapitre SIX",
-    "logo": "https://chapitresixhotels.com/wp-content/uploads/2026/02/Logo.svg",
+    "logo": "images/Confiance/chapitre-six.svg",
     "slug": "chapitre-six",
     "weight": 3,
     "certified": false,
@@ -182,7 +182,7 @@
   {
     "id": 1776427114916,
     "name": "Aéroport de Strasbourg",
-    "logo": "https://parking.strasbourg.aeroport.fr/assets/img/logo-as.png",
+    "logo": "images/Confiance/aeroport-de-strasbourg.webp",
     "slug": "aeroport-de-strasbourg",
     "weight": 5,
     "certified": false,
@@ -200,7 +200,7 @@
   {
     "id": 1776428864415,
     "name": "Vinci",
-    "logo": "https://www.vinci-energies.com/app/uploads/sites/7/2021/09/logo-VINCI-1-1.png",
+    "logo": "images/Confiance/vinci.webp",
     "slug": "vinci",
     "weight": 5,
     "certified": false,
@@ -218,7 +218,7 @@
   {
     "id": 1776433706640,
     "name": "Pullman",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Pullmanbali_logo-o.svg/1280px-Pullmanbali_logo-o.svg.png",
+    "logo": "images/Confiance/pullman.svg",
     "slug": "pullman",
     "weight": 5,
     "certified": false,
@@ -281,7 +281,7 @@
   {
     "id": 1776853741013,
     "name": "Aéroport La Réunion Roland Garros",
-    "logo": "https://www.reunion.aeroport.fr/themes/custom/arrg/assets/svg/logo.svg",
+    "logo": "images/Confiance/aeroport-la-reunion-roland-garros.svg",
     "slug": "aeroport-la-reunion-roland-garros",
     "weight": 5,
     "certified": false,
@@ -290,7 +290,7 @@
   {
     "id": 1777583288814,
     "name": "Aéroport du Luxembourg",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/LUX_Airport_logo.svg/960px-LUX_Airport_logo.svg.png",
+    "logo": "images/Confiance/aeroport-du-luxembourg.svg",
     "slug": "aeroport-du-luxembourg",
     "weight": 6,
     "certified": false,

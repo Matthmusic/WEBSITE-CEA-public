@@ -48,12 +48,12 @@ class ThemeManager {
 
         if (this.currentTheme === 'dark') {
             // Mode sombre : utiliser CEAOB.svg
-            if (navLogo) navLogo.src = 'ico/CEAOB.svg';
-            if (footerLogo) footerLogo.src = 'ico/CEAOB.svg';
+            if (navLogo) navLogo.src = 'ico/CEAOB.webp';
+            if (footerLogo) footerLogo.src = 'ico/CEAOB.webp';
         } else {
             // Mode clair : utiliser CEAON.svg
-            if (navLogo) navLogo.src = 'ico/CEAON.svg';
-            if (footerLogo) footerLogo.src = 'ico/CEAON.svg';
+            if (navLogo) navLogo.src = 'ico/CEAON.webp';
+            if (footerLogo) footerLogo.src = 'ico/CEAON.webp';
         }
     }
 }
@@ -1971,7 +1971,7 @@ function initNebulaEnhancements() {
 
     // Inject CEA logo at the orbital center
     const centerImg = document.createElement('img');
-    centerImg.src = 'ico/CEAON.svg';
+    centerImg.src = 'ico/CEAON.webp';
     centerImg.alt = 'CEA Ingénierie';
     centerImg.className = 'nebula-center-logo';
     nebula.appendChild(centerImg);
@@ -1979,7 +1979,7 @@ function initNebulaEnhancements() {
     // Update center logo when theme switches
     const observer = new MutationObserver(() => {
         const dark = document.documentElement.getAttribute('data-theme') === 'dark';
-        centerImg.src = dark ? 'ico/CEAOB.svg' : 'ico/CEAON.svg';
+        centerImg.src = dark ? 'ico/CEAOB.webp' : 'ico/CEAON.webp';
     });
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 

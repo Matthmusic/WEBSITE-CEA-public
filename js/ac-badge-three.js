@@ -1,7 +1,7 @@
 (() => {
   const BADGE_SELECTOR = '.ac-iridescent-badge';
   const THREE_CDN = 'https://unpkg.com/three@0.160.0/build/three.module.min.js';
-  const BADGE_TEXTURE = '/images/badges/h.png';
+  const BADGE_TEXTURE = '/images/badges/h.webp';
   const instances = new Map();
   let rafId = null;
   let io = null;
@@ -237,6 +237,8 @@
   }
 
   function boot() {
+    // Three.js WebGL trop lourd sur mobile — badge CSS uniquement
+    if (window.matchMedia('(max-width: 768px)').matches) return;
     loadThree().then(start).catch(() => {});
   }
 

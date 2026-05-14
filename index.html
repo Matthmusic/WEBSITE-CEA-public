@@ -44,18 +44,25 @@
     <link rel="icon" href="ico/favicon.ico">
     <link rel="icon" type="image/png" href="ico/CEA 2.png">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <!-- Préchargement LCP : image hero visible dès le premier rendu -->
+    <link rel="preload" as="image" href="images/jour.webp"
+          imagesrcset="images/jour-480w.webp 480w, images/jour-800w.webp 800w, images/jour-1200w.webp 1200w"
+          imagesizes="(max-width: 600px) 480px, (max-width: 1024px) 800px, 1200px">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-
+    <link media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <link media="print" onload="this.media='all'" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+    <link media="print" onload="this.media='all'" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
     <!-- AOS — Animate On Scroll -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <link media="print" onload="this.media='all'" rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"></noscript>
     <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link media="print" onload="this.media='all'" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></noscript>
 
     <!-- Schema.org structured data -->
     <script type="application/ld+json">
@@ -195,7 +202,7 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="#accueil" aria-label="Retour à l'accueil">
-                    <img src="ico/CEAON.svg" alt="CEA Ingénierie" class="logo" id="navLogo">
+                    <img src="ico/CEAON.webp" alt="CEA Ingénierie" class="logo" id="navLogo">
                 </a>
             </div>
             <ul class="nav-menu" id="nav-menu-list">
@@ -256,8 +263,15 @@
             </div>
             <div class="hero-visual">
                 <div class="hero-photo">
-                    <img class="hero-image hero-image--light" src="images/jour.webp" alt="Ingénierie électrique urbaine et infrastructures haute tension" aria-hidden="false">
-                    <img class="hero-image hero-image--dark" src="images/nuit.webp" alt="" aria-hidden="true">
+                    <img class="hero-image hero-image--light" src="images/jour.webp"
+                         srcset="images/jour-480w.webp 480w, images/jour-800w.webp 800w, images/jour-1200w.webp 1200w"
+                         sizes="(max-width: 600px) 480px, (max-width: 1024px) 800px, 1200px"
+                         fetchpriority="high"
+                         alt="Ingénierie électrique urbaine et infrastructures haute tension" aria-hidden="false">
+                    <img class="hero-image hero-image--dark" src="images/nuit.webp"
+                         srcset="images/nuit-480w.webp 480w, images/nuit-800w.webp 800w, images/nuit-1200w.webp 1200w"
+                         sizes="(max-width: 600px) 480px, (max-width: 1024px) 800px, 1200px"
+                         alt="" aria-hidden="true">
                     <div class="hero-photo-overlay"></div>
                 </div>
             </div>
@@ -272,8 +286,14 @@
                 <p class="section-subtitle">Survolez les points pour découvrir nos domaines — cliquez pour voir les réalisations</p>
             </div>
             <div class="hotspot-scene" id="hotspot-scene">
-                <img src="images/Nosdomainesjour.webp" alt="Domaines d’intervention CEA Ingénierie" class="hotspot-image hotspot-image--light" />
-                <img src="images/Nosdomainesnuit.webp" alt="" class="hotspot-image hotspot-image--dark" aria-hidden="true" />
+                <img src="images/Nosdomainesjour.webp"
+                     srcset="images/Nosdomainesjour-480w.webp 480w, images/Nosdomainesjour-800w.webp 800w, images/Nosdomainesjour-1200w.webp 1200w"
+                     sizes="(max-width: 600px) 480px, (max-width: 1024px) 800px, 1200px"
+                     alt="Domaines d’intervention CEA Ingénierie" class="hotspot-image hotspot-image--light" />
+                <img src="images/Nosdomainesnuit.webp"
+                     srcset="images/Nosdomainesnuit-480w.webp 480w, images/Nosdomainesnuit-800w.webp 800w, images/Nosdomainesnuit-1200w.webp 1200w"
+                     sizes="(max-width: 600px) 480px, (max-width: 1024px) 800px, 1200px"
+                     alt="" class="hotspot-image hotspot-image--dark" aria-hidden="true" />
                 <!-- Les points sont injectés dynamiquement par JS -->
             </div>
 
@@ -701,7 +721,7 @@
                             <p class="footer-certif-num">Certif. N° 25 02 6281</p>
                         </div>
                         <div class="footer-opqibi-item">
-                            <img src="images/references/partenaireschneider.png" alt="Partenaire mySchneider Bureau d'Études Premier+" class="footer-opqibi-logo">
+                            <img src="images/references/partenaireschneider.webp" alt="Partenaire mySchneider Bureau d'Études Premier+" class="footer-opqibi-logo">
                             <p class="footer-certif-num">Partenaire mySchneider</p>
                         </div>
                         <div class="footer-opqibi-item">
@@ -711,7 +731,7 @@
                     </div>
                 </div>
                 <div class="footer-section footer-section--center">
-                    <img src="ico/CEAON.svg" alt="CEA Ingénierie" class="footer-logo" id="footerLogo">
+                    <img src="ico/CEAON.webp" alt="CEA Ingénierie" class="footer-logo" id="footerLogo">
                     <p>Votre partenaire en génie électrique<br><span class="gradient-text">pour les projets complexes</span>.</p>
                 </div>
                 <div class="footer-section">
@@ -747,15 +767,19 @@
         </div>
     </div>
 
+    <!-- Leaflet CSS — chargé ici (non-bloquant, map en bas de page) -->
+    <link media="print" onload="this.media='all'" rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <noscript><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"></noscript>
+
     <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
-    <script src="js/ac-badge-three.js" defer></script>
-    <script src="js/ref-card.js" defer></script>
-    <script src="js/script.js" defer></script>
-
-    <!-- AOS init -->
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+    <script src="js/ac-badge-three.min.js" defer></script>
+    <script src="js/ref-card.min.js" defer></script>
+    <script src="js/script.min.js" defer></script>
 </body>
 </html>
