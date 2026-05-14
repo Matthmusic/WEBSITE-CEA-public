@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.setAttribute('data-theme', t);
     localStorage.setItem('theme', t);
     if (themeToggle) themeToggle.querySelector('i').className = t === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
-    if (navLogo) navLogo.src = t === 'dark' ? 'ico/CEAOB.webp' : 'ico/CEAON.webp';
+    if (navLogo) navLogo.src = t === 'dark' ? 'ico/CEAOB.svg' : 'ico/CEAON.svg';
   };
   applyTheme(getInitialTheme());
   if (themeToggle) themeToggle.addEventListener('click', () => {

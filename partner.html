@@ -5,23 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>CEA Ingénierie - Partenaire</title>
   <link rel="shortcut icon" href="ico/favicon.ico">
-  <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" crossorigin>
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"></noscript>
-  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
-  <link rel="preload" as="style" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
-  <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"></noscript>
-  <script src="js/css-loader.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 <body class="references-page-body">
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="index.html#accueil" aria-label="Retour à l'accueil">
-                    <img src="ico/CEAON.webp" alt="CEA Ingénierie" class="logo" id="navLogo">
+                    <img src="ico/CEAON.svg" alt="CEA Ingénierie" class="logo" id="navLogo">
                 </a>
             </div>
             <ul class="nav-menu" id="nav-menu-list">
@@ -66,10 +61,11 @@
       <div id="gallery-caption" class="gallery-caption"><span id="gallery-counter"></span></div>
     </div>
   </div>
-  <script src="js/nav.min.js" defer></script>
-  <script src="js/shared.min.js" defer></script>
-  <script src="js/ac-badge-three.min.js" defer></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
-  <script src="js/partner.min.js" defer></script>
+  <script src="js/nav.js" defer></script>
+  <script src="js/shared.js" defer></script>
+  <script src="js/ac-badge-three.js" defer></script>
+  <script src="js/partner.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 60 });</script>
 </body>
 </html>

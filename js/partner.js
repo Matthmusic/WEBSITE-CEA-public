@@ -48,7 +48,7 @@ const shortAddr = (a) => { if (!a) return ''; const parts = a.split(',').map(s =
     const image = images[0] || '';
     const st = statusOf(r.endDate);
     const site = siteById.get(String(r.siteId || ''));
-    const budget = r.showBudget ? budgetShort(r.budgetAmount) : '';
+    const budget = budgetShort(r.budgetAmount);
     const dataGallery = images.length ? ` data-gallery="${JSON.stringify(images).replace(/"/g, '&quot;')}"` : '';
     return `
       <article class="ref-card reference-detail-card"${dataGallery}>
@@ -87,5 +87,3 @@ const shortAddr = (a) => { if (!a) return ''; const parts = a.split(',').map(s =
     if (items.length) open(0);
   });
 })();
-
-if (window.AOS) AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 60 });

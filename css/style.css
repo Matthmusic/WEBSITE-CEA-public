@@ -2416,10 +2416,6 @@ section[id] {
     align-items: flex-start;
     text-align: left;
   }
-  .footer-opqibi {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 }
 
 /* ==========================================================================

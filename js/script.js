@@ -48,12 +48,12 @@ class ThemeManager {
 
         if (this.currentTheme === 'dark') {
             // Mode sombre : utiliser CEAOB.svg
-            if (navLogo) navLogo.src = 'ico/CEAOB.webp';
-            if (footerLogo) footerLogo.src = 'ico/CEAOB.webp';
+            if (navLogo) navLogo.src = 'ico/CEAOB.svg';
+            if (footerLogo) footerLogo.src = 'ico/CEAOB.svg';
         } else {
             // Mode clair : utiliser CEAON.svg
-            if (navLogo) navLogo.src = 'ico/CEAON.webp';
-            if (footerLogo) footerLogo.src = 'ico/CEAON.webp';
+            if (navLogo) navLogo.src = 'ico/CEAON.svg';
+            if (footerLogo) footerLogo.src = 'ico/CEAON.svg';
         }
     }
 }
@@ -811,8 +811,6 @@ document.addEventListener('DOMContentLoaded', () => {
         glow.style.top  = `${e.clientY}px`;
     });
 
-    if (window.AOS) AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 60 });
-
     fetch('data/version.json').then(r => r.json()).then(d => {
         console.log(`🚀 CEA Ingénierie website loaded successfully! — v${d.version}`);
     }).catch(() => {
@@ -1299,6 +1297,7 @@ async function loadTeam() {
                             alt="${escapeHtml(fullName)}"
                             loading="lazy"
                             decoding="async"
+                            onerror="this.classList.add('img-error')"
                         >
                         <div class="photo-placeholder" role="img" aria-label="Icône utilisateur ${escapeHtml(fullName)}"><i class="fas fa-user"></i></div>
                     `
@@ -1970,7 +1969,7 @@ function initNebulaEnhancements() {
 
     // Inject CEA logo at the orbital center
     const centerImg = document.createElement('img');
-    centerImg.src = 'ico/CEAON.webp';
+    centerImg.src = 'ico/CEAON.svg';
     centerImg.alt = 'CEA Ingénierie';
     centerImg.className = 'nebula-center-logo';
     nebula.appendChild(centerImg);
@@ -1978,7 +1977,7 @@ function initNebulaEnhancements() {
     // Update center logo when theme switches
     const observer = new MutationObserver(() => {
         const dark = document.documentElement.getAttribute('data-theme') === 'dark';
-        centerImg.src = dark ? 'ico/CEAOB.webp' : 'ico/CEAON.webp';
+        centerImg.src = dark ? 'ico/CEAOB.svg' : 'ico/CEAON.svg';
     });
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 

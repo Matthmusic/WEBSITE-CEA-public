@@ -64,5 +64,3 @@ function isDelivered(endDate) {
       </article>`;
   }).join('');
 })();
-
-if (window.AOS) AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 60 });
