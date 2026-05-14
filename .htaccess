@@ -24,7 +24,7 @@
     Header always set Cross-Origin-Resource-Policy "cross-origin"
 
     # Content Security Policy
-    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' cdn.jsdelivr.net unpkg.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com cdnjs.cloudflare.com cdn.jsdelivr.net unpkg.com; font-src 'self' data: fonts.gstatic.com cdnjs.cloudflare.com; img-src 'self' data: blob: https:; connect-src 'self' cdn.jsdelivr.net unpkg.com; form-action 'self'; frame-ancestors 'none'; object-src 'none'; base-uri 'self';"
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' cdn.jsdelivr.net unpkg.com cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com cdnjs.cloudflare.com cdn.jsdelivr.net unpkg.com; font-src 'self' data: fonts.gstatic.com cdnjs.cloudflare.com; img-src 'self' data: blob: https:; connect-src 'self' https:; form-action 'self'; frame-ancestors 'none'; object-src 'none'; base-uri 'self';"
 </IfModule>
 
 # Redirection HTTP → HTTPS
