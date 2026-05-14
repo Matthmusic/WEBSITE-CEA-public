@@ -4,296 +4,216 @@
     "name": "Aéroport Nice Côte d'Azur",
     "logo": "images/Confiance/Aeroport_Nice_Cote_d'Azur_logo.svg.png",
     "slug": "aeroport-nice-cote-d-azur",
-    "weight": 9,
-    "certified": false,
-    "certifiedDescription": ""
+    "weight": 9
   },
   {
     "id": 2,
     "name": "Aéroport Lyon",
     "logo": "images/Confiance/AEROPORT DE LYON.png",
     "slug": "aeroport-lyon",
-    "weight": 9,
-    "certified": false,
-    "certifiedDescription": ""
+    "weight": 9
   },
   {
     "id": 3,
     "name": "Aéroport Toulon Hyères",
     "logo": "images/Confiance/Toulon-aeroport.svg",
     "slug": "aeroport-toulon-hyeres",
-    "weight": 7,
-    "certified": false,
-    "certifiedDescription": ""
+    "weight": 7
   },
   {
     "id": 4,
     "name": "Palais des Festivals de Cannes",
-    "logo": "images/Confiance/palais-des-festivals-de-cannes.webp",
+    "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu8OUOj3xK9NBu-HFqESgOKoHZABaVwCneHA&s",
     "slug": "palais-des-festivals-de-cannes",
-    "weight": 10,
-    "certified": false,
-    "certifiedDescription": ""
+    "weight": 10
   },
   {
     "id": 5,
     "name": "SBM Monte-Carlo",
     "logo": "images/Confiance/SBM_Monte_Carlo_logo.svg",
     "slug": "sbm-monte-carlo",
-    "weight": 10,
-    "certified": false,
-    "certifiedDescription": ""
+    "weight": 10
   },
   {
     "id": 6,
     "name": "Métropole Nice Côte d'Azur",
-    "logo": "images/Confiance/metropole-nice-cote-d-azur.webp",
+    "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/b/bd/M%C3%A9tropole_NCA_Logo.svg/3840px-M%C3%A9tropole_NCA_Logo.svg.png",
     "slug": "metropole-nice-cote-d-azur",
-    "weight": 8,
-    "certified": false,
-    "certifiedDescription": ""
+    "weight": 8
   },
   {
     "id": 7,
     "name": "Département des Alpes-Maritimes",
     "logo": "data:image/png;base64,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",
     "slug": "departement-des-alpes-maritimes",
-    "weight": 8,
-    "certified": false,
-    "certifiedDescription": ""
+    "weight": 8
   },
   {
     "id": 8,
     "name": "CCI Nice Côte d'Azur",
     "logo": "images/Confiance/CCI NICE COTE D'AZUR.png",
     "slug": "cci-nice-cote-d-azur",
-    "weight": 5,
-    "certified": false,
-    "certifiedDescription": ""
+    "weight": 5
   },
   {
     "id": 9,
     "name": "Sea Wergie Énergie",
     "logo": "images/Confiance/sea Wergie.png",
     "slug": "sea-wergie-energie",
-    "weight": 5,
-    "certified": false,
-    "certifiedDescription": ""
+    "weight": 5
   },
   {
     "id": 10,
     "name": "Groupe Kantys",
     "logo": "images/Confiance/KANTYS.png",
     "slug": "groupe-kantys",
-    "weight": 8,
-    "certified": false,
-    "certifiedDescription": ""
+    "weight": 8
   },
   {
     "id": 11,
     "name": "Centre Hospitalier Intercommunal Fréjus",
     "logo": "images/Confiance/CHI FREJUS.png",
     "slug": "centre-hospitalier-intercommunal-frejus",
-    "weight": 3,
-    "certified": false,
-    "certifiedDescription": ""
+    "weight": 3
   },
   {
     "id": 13,
     "name": "Silcen Industrie",
     "logo": "images/Confiance/SILCEN.png",
     "slug": "silcen-industrie",
-    "weight": 3,
-    "certified": false,
-    "certifiedDescription": ""
+    "weight": 3
   },
   {
     "id": 14,
     "name": "Transcan Groupe",
     "logo": "images/Confiance/transcan-groupe.png",
     "slug": "transcan-groupe",
-    "weight": 2,
-    "certified": false,
-    "certifiedDescription": ""
+    "weight": 2
   },
   {
     "id": 16,
     "name": "Aéroport de Bordeaux Mérignac",
     "logo": "images/Confiance/ADBM.png",
     "slug": "aeroport-de-bordeaux-merignac",
-    "weight": 8,
-    "certified": false,
-    "certifiedDescription": ""
+    "weight": 8
   },
   {
     "id": 1776260995811,
     "name": "Hospices Civils de Lyon",
-    "logo": "images/Confiance/hospices-civils-de-lyon.svg",
+    "logo": "https://www.chu-lyon.fr/themes/custom/hcl/assets/images/logo.svg",
     "slug": "hospices-civils-de-lyon",
-    "weight": 5,
-    "certified": false,
-    "certifiedDescription": ""
+    "weight": 5
   },
   {
     "id": 1776343887130,
     "name": "Aéroports de Paris",
-    "logo": "images/Confiance/aeroports-de-paris.svg",
+    "logo": "https://cdn-paso-back.pro.digital.cloud-adp.fr/back/upload/ADP_37dcdaa1fb.svg",
     "slug": "aeroports-de-paris",
-    "weight": 10,
-    "certified": true,
-    "certifiedDescription": ""
+    "weight": 10
   },
   {
     "id": 1776346002735,
     "name": "Aéroport Béziers Cap d'Agde",
-    "logo": "images/Confiance/aeroport-beziers-cap-d-agde.svg",
+    "logo": "https://beziers.aeroport.fr/storage/logo-bleu.svg",
     "slug": "aeroport-beziers-cap-d-agde",
-    "weight": 3,
-    "certified": false,
-    "certifiedDescription": ""
+    "weight": 3
   },
   {
     "id": 1776348471571,
     "name": "Aéroport Chambéry Savoie Mont Blanc",
-    "logo": "images/Confiance/aeroport-chambery-savoie-mont-blanc.svg",
+    "logo": "https://www.chambery-airport.com/themes/adl/images/logo-chambery-aeroport.svg",
     "slug": "aeroport-chambery-savoie-mont-blanc",
-    "weight": 2,
-    "certified": false,
-    "certifiedDescription": ""
+    "weight": 2
   },
   {
     "id": 1776407414405,
     "name": "Chapitre SIX",
-    "logo": "images/Confiance/chapitre-six.svg",
+    "logo": "https://chapitresixhotels.com/wp-content/uploads/2026/02/Logo.svg",
     "slug": "chapitre-six",
-    "weight": 3,
-    "certified": false,
-    "certifiedDescription": ""
+    "weight": 3
   },
   {
     "id": 1776425831852,
     "name": "Pôle Santé Saint Jean",
     "logo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZwAAAB6CAMAAAC89RUgAAAAulBMVEX///8BXHMAVm4AWXEAVG0AUmsAVW1+nKgAXXQAUGoAWG8AYHbs9PUAVm92nar6/f2Rs70edYlroKy20Ndkj57F0dY2gJIraX2au8XW3+PZ6OusytEZZHqSqrQAS2atw8qDr7vH2+A8eYt3p7QAaoDx9/hwmKVFhpeDprHi6u1ijZtTipoiboJKgJFZkqE4coWnvsabvshZhJS81duht8CNt8FEd4m+ztVRj59jmKcIcIYofI8ARWGgwsuIS8CEAAAQGElEQVR4nO1daWPaOrNGkiHezVYW4wI2GOywNrQnoSn//2/dGckbYJK09z1Ac/R8aLHiZaRHM5qRxnKl8nkQDl6Wy5fWrcWQKEG80Bhh+rAZ3loSiVM4iyrhoLZza1kkTjDQSILu7taySJzghabkkOjWskicoJtxQ9vSrt0ZCuTMbi2LxAnmmVlj0qzdG3wl5Wbj31oWiVNMqoxzQ77dWhKJM4T2hik1Fny9tSASZfC3X79upU27VzjSiZaQkPhUcBC3FkLiFKEZP4/X807jdf7SHMWmXDa4F4T90aShaAqlTNcZrVWtxv65b95aLAmwZbtoWq0xUgSj2nQ/im8t2n8ebrRUSBkoeRxJ7bkpRqtyajg9Xrt/a/n+wzBtj13kBqwbW8p8j1shbtOcG8zuYDplR2wxXU6D3gbuqppxQDyvuwle1utF0PUMoCml55fUnVsgnmdLON7TZOCmsY3jf7NXS+BLQJVToddHaCd6oxuPo9N5gbAVBVbCXODeRL7/NOqJ3tBgWxrQ+NEyWbmWiWzXhp+MKtrikrvstFaCne7oqpJJOIFoeK2ZB5p+1J6Ni3Gnv6pxw7aQhu2q+JHozT6f4oyXhFI1KJ7lCwpVqTrXhLvhVo2uC4riD7FoeDRls1vieXQm53GuiLEqHLGiK+DzbGnt2IQdDDxvKt3p68F8KjFX/TJyKns8U/suHbarYeRxo/Z45EPHpeTE6qn5k/hX4UQ8wFR7R6UxD0qHp55ZEzw21pBrO9eCu0Bbpa+OeYitUnK4QlG5dnAt7JbcqtnHpTErJafSgfKqdKavhRHXEePYqonRpYScsUKI0pMewXXgiGm107cJYoOTcza6oBenjCU510HI/QG2OvHA4ik7C0J5OZTWJpKc6yCecXKeToun5zMECPMnjE9NSc51EAtn7fG0uMHJOcsnNBtMmrWrQZBD9qfFDXaZHOkQXAnxDMlh7ZNis4Mr08MzFtCsVWUmwZVg2rRszDE7rJQcjH+GMgi9EsKoVkrOnGvO2enoSk/l9M218B3jHPbPSbhp8qHonByIiuheTnxeCy2+SNMdHJea62NyHDOOYzMMXyhRztJzJP4t+AGOLmr9uNTcW0Vy/O8vr43O2o6gcCqHnKshbiMNtH1sq8JmUXNGS43qjFELxifFllbteqjz7A7veKo5tJEyTRxsCxnuzJOO9BWx25SshAonrsp/t5aFfHarLRXninAe+RwB2xbH+RDXBoiFP81HPeeGeIMLt/lLsdOs6uouRlG3WRaitITVMoqrBmIlgeHPrVHg5rPtIhV7jJHqPWR7OT81q1dS3uaqQYu5UU4PyVEr/L2dnBrrk+2NZy5qhv3IqvXbVytS1KjsvXVfqI6yziNRZ4vkGPDrOfcGqDH7ZJMD34KgXontoHNzw+Yugnr5ngJ1seGq0snYcUZQxJCc78lmrLpiLD7bdLTj9l3HDE23/4edLoz/VwbRdC/loKeZ7FbwnBb18ZWcKfx4XioWpYoa2KO/OoX9QSCqDwpEmINo9th+qGd7APtwSjGoGD0U8Fw5RtxrPz3CxcUu+x0ekQ/e7teHhzS8x1t/yQVJ4KNnXDienatPfyk8Mn3ZS/7ouHVPQXLC/she77e+e7mPuHWQ6NtxFoKJZcUHuVGUSu326vU0WvLr9TpvrbBVL+I0msLz+uLGBRwKD7QfHnr5A134a9KZ+J0rVIAZXpC1/m7hMSxUu+uEsYGhWMVEpBn2TAGLnjhDg41Bdbx40croiQPFsvLz/I1SUxMhD0NLwSdr2R0BQygxjVp2bJ2nbcBdpom/bMxS/XD662ZSOzN8w57F0cawLOJt2kUv27dqlla05F80Uk28kdZSVQNBlFNnhnATzT38yqCerv59o4bFG7VfOE19zU8YaZai5jU7WIaapKaaM7ikgulEOHoyxpKA2zkYUFBTLJ1BbC2qPYARtkiOXXBU2fEUlwt+HmM6/mtkOtXzMCEjMzE4N8Y24vBQJQwfXE3HcPxfQ3KmyQFCK/WnVZaI4I3Tsg9tTBRGFgrJxZxkpQ7mhlrFFi6S04UrRDALLjtjqOyVeK/gXYQMOj0lp1dN8uX6Cm9gDtrIxcA1DiVvPmgKYgknzMQ0iQo6n12AgfaB95otjqbe5EczwBYlvFXKyPG6CY7JeYWhwFsFXYPRzESEPGbMs2f5xCV9MhOJODn8dpgCzf9/FuSo6TOMUgO1y+YBqsbhNwb+Z7jM28zhcXSa3zjmCVfFBBEgRymQQ6wIH+LUgUShObaXCM2lP0lyrIBrn5OTNVcn+3sf31lhaiY4kkM0bhxNXOwFzeEvr5iHJZRjT3eBJlW8Luav4No5XntGDmOXNqUfEn0FkjuD1WOmKQNoRKPwloyYVWa8qik5HA8gUqojQA5dv7P7k7/KfGatMTA/yE8I0aqC9syPgsKAOakRVSVKrkpn5DADJc3JERjXiHE67nIUyVHq539/ofhALRuEODmMoYoIzQFy2kI5qkTBrg66Te2kTfwADBtee645FycTh+kNw9zHxTyzscKmaRUEOcTD2ZciOQ6Sk17GyXnPXXRtI403mTX/4FZEpm0RRZwa53yGBmOLlc6MvOiUHLEtcgk55a/OHZNzntsAXCxWTM/sHCeH6A2zoDmiLWONkxLCILTMBsUIjpCUEs3xLmgOWozIP2ol4IK+QN1rUUY6I3BHiiPs2+S865I724Cm9FC2+ND+q6g5tL1zj5vroBGvtQUFz92pY3JUsF/KIv5Tcs7+DJq6bNXBJKf3gqZQDdBd2+HkqGea40PPz1c/dmCVn8LSMUdtfxU4aY61AgNV0P7aym7i9CwUoFljKetADuvY0EIL801yyCYSz6i/QVJ/tCA5PUH0AXqeoc9Zy8doW4yCAp0+xS705FVWdEQOUeczhaDT+ifk6KukubI12XCJX13YbRhbJyWoOTYYahicj8ac8LCBbvHMOarlvr7ZFS9alDkEVOFgP44lcl/RNaFQ917SojHYio5T6VvESmaRkZx5DFGkNXmbnOQh1Z9vxpLx856lm3no1sZ+l54wwgGEUm8VZTfewdBc5zXLDfYxOaTZ34DL1vsjcohe41XRsmH0ANanV3HajHQTIbApngegn8tdmHpr3j8ATwcrAye1tA+Rk3jf4Bmqp9OS7lqr8tQl1RbG7ZnytLFwDRwJvoAcfV7ZgevBdoM3ydET9/OdQD/sj6dDmrriS/u9eYGwrmo8pVfNTPia8YwRv0tY9qGKE3Lsyhadd/+PyEk86WpGzorxbG9oWnUsSjg5laZO2GJnC83hLQAFdIo9Bty7wjAMZo09meVmrdHhmJ8vlpiDF5VCH6tt+dGaEmMyHo8XjGiiToKcyhYEUH9ATS+SMxXP6LzrGKCsayPdQ4oZk/c2+XT85pRCmEETzxZIIRsQctwtfAzhjBwHVE5fjunvkmMRthQ1eR0nkuGiRwDPm3hZSj6QY4Hx6lDCHqGxVE6OivBEmO1AgfElvT2QwPvRb7jSCXDMp/tYSCbME8Y23DFPyeHWBaP8yw7Bb22kGvZWXjJpoKit9/1q1/ayuGbCrwKQwgLQqVkDodoYvZL/gUMwA0kZPA/1PXnTSGhOxTQYD745OZtmNJ6M07ZGV7otGshpgY296EpfIMfxRW3DKQz6roi7WTJHBNXnd07IqbgLEV3/P7y1k4cP2ktL3HP4VqpaMp2KPr5QZnAEUin1/H3GM83JooB3yAn5s8Edq/LoocSV9qFp06kzaHDeCRPNyWY+Kmc7KLgQMCoL3zRNtwc/6QKv4+SEpoAjyBmkx8e9e8v2nB5/ioM+9gOi/9PmWHnJ7EhKTvL+4EVy9IVr5g/9EJyWvRTbRdH5RVvYXwV8uhrzesWbcD0Y/xaJlBAwb8V5JeRUBsb75IRR2w8rbgNMEzdCQE4tSmsiWruOyd4CQLfYUDElp1LPyWkfVcIZgVZZy5k9W4Fy1RpcCnQhAlsAfVUwd8YiOZ4dCQZOD13a30cQfoigtl6Fugqp3DZYU6QyIwdG2LfIYSBG8pCPL144u5kqjNulLW/ihUXJAmScQUPzmNMEyYykI7hK1l/LyEkWkt4iJ4yIFURf5xahYqkfyGFp89n8Lu4TJcuErJ0GhhSbJTFrcINZrZwcCEuw61mo30SbC2cGyUm0sIbpEuhKJ1aAag/Fq3eshmfi2MyW+CQwTlkj9VSiYWVzchy79gY52TPobyWim71kM68L6WrxHqTTFVWFs8TE5jPEHNm05ZwyT4y6peQ489o75MRTsOQWjrFEGDPurSU1qfEkh5FBlCwGmTI9wPpl5ICVxQpULEs7IQdGjUVVwYS8qlpPlwxUxUqgIDkzpZYeW8fkVPy1WuVDpuLhXGRrqFvZWOhDNL8R/9cEOZWwQXUrJ0dhLCeHsgy/95aA4/PKsdQ8ncIcBdzbJ7rGZ6rCSNHzF313Q70qookvQ6Zl5FCWrEbEUz2ZlRYYVxk5IsdpNXCOXa8aySpuX9PzqhC8xUxhStZz6pquoKQH+D+5UQsrX2k2m9/OXCLHH7+8Nl7H2cyTP2lmmEAtDs0CTnxpJz50jOEvdc3bc/+zMc97WdRooJ30XxqNtKO6PxuNNOpzIjhIu0rYaeT4SD6tM1pnTxJJ7Zc3KQx362n1l9UZ8Lr3QZ6X/G/zRkOMV36j00hq54M047Q1QMqCPN8KNUgff+gQrVFP26//s1AVXM/pdxo/m/nZDTgCqlpwWjr92IMz36/y34NwoimNbFWUr2JXt58sg+CvBSYVMi1daDTRtOqvnyz15q8Fny3OJ+B5/me1dKFF4urgSYV6tkQfYgwl9x+4EzjbKvgA+SrwmHMlv6RzF3BGSM48O+6jS6D85gSQxL+EZw0nbbJDEzeNON+nSOIm4OTk8Qrfl0CTu3veB76ckPOC5Nw83VuC4wsmBa6zQ75phCYdgvvAF1zOy9Mu+f5rU0nOfcBXj8jBN0LoXsY594G+gRurpUchbiIlNyS6NeLdYIAvnPSnjFgZOfjqoS63LL4twv2m63ndAMkhGTnxWs5K3x6+RS18meMXvk6VkOO4E/5WqHIPrxz/h+FMqbeajBcbC8iBUabWhPjml8a/uCu/m3NjHMiSr1Wag4ScScWci8+3eO8mfkr8uxjX8lxtN0jIoTqtkfOv7ElcGQctH1bcQBfkGEH7q/xs+O1hssJL2h2uOU7fd2OpNfeAQb665s45ORL3g11m12JJzv0iXkhy7ha4U7sk504hybljSHLuGJKcO4Yk546BywSSnDuFJOeOgfuuKpKc+0S8B80Z31oKiVKgWVN+vH+exA0QL3RSPbx/nsQN4HZ0mRt9VygkpmGChyZTOu4Hh3yLTL7LzlSust0P1vmGqfihCUt+SfeOsMjJwY+4Kl/eOlniuthn2dBOvUpoRw45d4QWTV/I2TJCVJkOdU9wFgz3/3f874QQS344774QT+lTFM0Cxs72v5K4Odz5UGFU12u0KfXm7uD0mw3VeJ18urmB/wOF2ljvt1fkKQAAAABJRU5ErkJggg==",
     "slug": "pole-sante-saint-jean",
-    "weight": 5,
-    "certified": false,
-    "certifiedDescription": ""
+    "weight": 5
   },
   {
     "id": 1776427114916,
     "name": "Aéroport de Strasbourg",
-    "logo": "images/Confiance/aeroport-de-strasbourg.webp",
+    "logo": "https://parking.strasbourg.aeroport.fr/assets/img/logo-as.png",
     "slug": "aeroport-de-strasbourg",
-    "weight": 5,
-    "certified": false,
-    "certifiedDescription": ""
+    "weight": 5
   },
   {
     "id": 1776428726490,
     "name": "Nice Parc Azur",
     "logo": "images/references/partners/logo-1776428715904.png",
     "slug": "nice-parc-azur",
-    "weight": 5,
-    "certified": false,
-    "certifiedDescription": ""
+    "weight": 5
   },
   {
     "id": 1776428864415,
     "name": "Vinci",
-    "logo": "images/Confiance/vinci.webp",
+    "logo": "https://www.vinci-energies.com/app/uploads/sites/7/2021/09/logo-VINCI-1-1.png",
     "slug": "vinci",
-    "weight": 5,
-    "certified": false,
-    "certifiedDescription": ""
+    "weight": 5
   },
   {
     "id": 1776428890604,
     "name": "Razel-Bec",
     "logo": "data:image/png;base64,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",
     "slug": "razel-bec",
-    "weight": 5,
-    "certified": false,
-    "certifiedDescription": ""
+    "weight": 5
   },
   {
     "id": 1776433706640,
     "name": "Pullman",
-    "logo": "images/Confiance/pullman.svg",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Pullmanbali_logo-o.svg/1280px-Pullmanbali_logo-o.svg.png",
     "slug": "pullman",
-    "weight": 5,
-    "certified": false,
-    "certifiedDescription": ""
+    "weight": 5
   },
   {
     "id": 1776433851188,
     "name": "Sogeti Ingénierie Airport",
     "logo": "images/Confiance/LOGO_SOGETI_AIRPORTS-1024x428.webp",
     "slug": "sogeti-ingenierie-airport",
-    "weight": 2,
-    "certified": false,
-    "certifiedDescription": ""
+    "weight": 2
   },
   {
     "id": 1776433884962,
     "name": "Iming",
     "logo": "images/Confiance/logo-groupe-iming-header-sticky.svg",
     "slug": "iming",
-    "weight": 2,
-    "certified": false,
-    "certifiedDescription": ""
+    "weight": 2
   },
   {
     "id": 1776433973703,
     "name": "Conseil plus",
     "logo": "images/Confiance/conseil-plus-ingenierie-1.webp",
     "slug": "conseil-plus",
-    "weight": 3,
-    "certified": false,
-    "certifiedDescription": ""
+    "weight": 3
   },
   {
     "id": 1776434188655,
     "name": "CV3E",
     "logo": "images/references/partners/cv3e.png",
     "slug": "cv3e",
-    "weight": 1,
-    "certified": false,
-    "certifiedDescription": ""
+    "weight": 1
   },
   {
     "id": 1776434222210,
     "name": "Europ'Elec",
     "logo": "images/references/partners/logo-1776434213064.png",
     "slug": "europ-elec",
-    "weight": 1,
-    "certified": false,
-    "certifiedDescription": ""
+    "weight": 1
   },
   {
     "id": 1776667450033,
     "name": "SOGET",
     "logo": "images/references/partners/soget.jpg",
     "slug": "soget",
-    "weight": 4,
-    "certified": false,
-    "certifiedDescription": ""
-  },
-  {
-    "id": 1776853741013,
-    "name": "Aéroport La Réunion Roland Garros",
-    "logo": "images/Confiance/aeroport-la-reunion-roland-garros.svg",
-    "slug": "aeroport-la-reunion-roland-garros",
-    "weight": 5,
-    "certified": false,
-    "certifiedDescription": ""
-  },
-  {
-    "id": 1777583288814,
-    "name": "Aéroport du Luxembourg",
-    "logo": "images/Confiance/aeroport-du-luxembourg.webp",
-    "slug": "aeroport-du-luxembourg",
-    "weight": 6,
-    "certified": false,
-    "certifiedDescription": ""
+    "weight": 4
   }
 ]
