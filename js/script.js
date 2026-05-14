@@ -1299,7 +1299,6 @@ async function loadTeam() {
                             alt="${escapeHtml(fullName)}"
                             loading="lazy"
                             decoding="async"
-                            onerror="this.classList.add('img-error')"
                         >
                         <div class="photo-placeholder" role="img" aria-label="Icône utilisateur ${escapeHtml(fullName)}"><i class="fas fa-user"></i></div>
                     `
