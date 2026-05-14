@@ -47,7 +47,7 @@
   {
     "id": 6,
     "name": "Métropole Nice Côte d'Azur",
-    "logo": "images/Confiance/metropole-nice-cote-d-azur.svg",
+    "logo": "images/Confiance/metropole-nice-cote-d-azur.webp",
     "slug": "metropole-nice-cote-d-azur",
     "weight": 8,
     "certified": false,
@@ -290,7 +290,7 @@
   {
     "id": 1777583288814,
     "name": "Aéroport du Luxembourg",
-    "logo": "images/Confiance/aeroport-du-luxembourg.svg",
+    "logo": "images/Confiance/aeroport-du-luxembourg.webp",
     "slug": "aeroport-du-luxembourg",
     "weight": 6,
     "certified": false,

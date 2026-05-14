@@ -213,4 +213,5 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   buildFilterControls();
   renderGrid();
+  if (window.AOS) AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 60 });
 });
