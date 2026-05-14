@@ -816,6 +816,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }).catch(() => {
         console.log('🚀 CEA Ingénierie website loaded successfully!');
     });
+
+    if (window.AOS) AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 60 });
 });
 
 // Logo Nebula Collision System
@@ -2407,5 +2409,3 @@ function launchConfetti() {
     frame = requestAnimationFrame(draw);
     setTimeout(() => { cancelAnimationFrame(frame); canvas.remove(); }, 4000);
 }
-
-if (window.AOS) AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 60 });
