@@ -2309,7 +2309,7 @@ function initMapEasterEggs(map) {
     overlay.innerHTML = `
         <div id="easter-egg-box">
             <button id="easter-egg-close" aria-label="Fermer">✕</button>
-            <img id="easter-egg-img" src="" alt="">
+            <img id="easter-egg-img" alt="">
             <p id="easter-egg-msg"></p>
         </div>`;
     document.body.appendChild(overlay);

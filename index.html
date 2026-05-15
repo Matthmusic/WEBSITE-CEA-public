@@ -262,8 +262,14 @@
             </div>
             <div class="hero-visual">
                 <div class="hero-photo">
-                    <img class="hero-image hero-image--light" src="images/jour.png" alt="Ingénierie électrique urbaine et infrastructures haute tension" aria-hidden="false">
-                    <img class="hero-image hero-image--dark" src="images/nuit.png" alt="" aria-hidden="true">
+                    <picture>
+                        <source srcset="images/jour.webp" type="image/webp">
+                        <img class="hero-image hero-image--light" src="images/jour.png" alt="Ingénierie électrique urbaine et infrastructures haute tension" aria-hidden="false">
+                    </picture>
+                    <picture>
+                        <source srcset="images/nuit.webp" type="image/webp">
+                        <img class="hero-image hero-image--dark" src="images/nuit.png" alt="" aria-hidden="true">
+                    </picture>
                     <div class="hero-photo-overlay"></div>
                 </div>
             </div>
@@ -746,7 +752,7 @@
         <button class="gallery-prev" aria-label="Image précédente">&#10094;</button>
         <button class="gallery-next" aria-label="Image suivante">&#10095;</button>
         <div class="gallery-content">
-            <img src="" alt="Image de projet" id="gallery-image">
+            <img alt="Image de projet" id="gallery-image">
             <div id="gallery-caption" class="gallery-caption">
                 <span id="gallery-counter"></span>
             </div>

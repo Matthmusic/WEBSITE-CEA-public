@@ -98,7 +98,7 @@ class SimpleGallery {
   const partnerSlug = String(partner?.slug || '').trim();
   const partnerUrl = partnerSlug ? `partner.html?partner=${encodeURIComponent(partnerSlug)}` : '';
 
-  const budget = (Number.isFinite(Number(match.budgetAmount)) && Number(match.budgetAmount) > 0)
+  const budget = (match.showBudget && Number.isFinite(Number(match.budgetAmount)) && Number(match.budgetAmount) > 0)
     ? budgetShort(match.budgetAmount)
     : '';
 

@@ -46,7 +46,7 @@ function isDelivered(endDate) {
 
   document.getElementById('siteProjectsGrid').innerHTML = ordered.map((r) => {
     const image = Array.isArray(r.images) && r.images.length ? r.images[0] : (r.imageUrl || '');
-    const budget = r.budgetAmount > 0 ? money(r.budgetAmount) : '';
+    const budget = r.showBudget && r.budgetAmount > 0 ? money(r.budgetAmount) : '';
     return `
       <article class="ref-card">
         <div class="ref-image">

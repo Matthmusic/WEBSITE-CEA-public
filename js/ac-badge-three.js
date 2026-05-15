@@ -1,29 +1,16 @@
 (() => {
   const BADGE_SELECTOR = '.ac-iridescent-badge';
-  const THREE_CDN = 'https://unpkg.com/three@0.160.0/build/three.min.js';
+  const THREE_CDN = 'https://unpkg.com/three@0.160.0/build/three.module.min.js';
   const BADGE_TEXTURE = '/images/badges/h.png';
   const instances = new Map();
   let rafId = null;
   let io = null;
+  let THREE = null;
+  let frameCount = 0;
 
   function loadThree() {
-    if (window.THREE) return Promise.resolve(window.THREE);
-    return new Promise((resolve, reject) => {
-      const existing = document.querySelector('script[data-ac-three-loader="1"]');
-      if (existing) {
-        existing.addEventListener('load', () => resolve(window.THREE), { once: true });
-        existing.addEventListener('error', reject, { once: true });
-        return;
-      }
-      const script = document.createElement('script');
-      script.src = THREE_CDN;
-      script.async = true;
-      script.defer = true;
-      script.dataset.acThreeLoader = '1';
-      script.onload = () => resolve(window.THREE);
-      script.onerror = reject;
-      document.head.appendChild(script);
-    });
+    if (THREE) return Promise.resolve(THREE);
+    return import(THREE_CDN).then(mod => { THREE = mod; return THREE; });
   }
 
   function cleanupBadge(el) {
@@ -40,7 +27,7 @@
   }
 
   function createBadgeScene(el) {
-    if (!window.THREE || instances.has(el)) return;
+    if (!THREE || instances.has(el)) return;
 
     // Lire clientWidth après layout — s'il est encore 0, reporter après un frame
     const size = Math.max(32, Math.ceil(Math.max(el.clientWidth, el.clientHeight)));
@@ -53,7 +40,7 @@
     }
 
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: 'low-power' });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
     renderer.setSize(size, size, false);
     renderer.setClearColor(0x000000, 0);
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
@@ -88,7 +75,7 @@
       emissiveIntensity: 0.52
     });
 
-    for (let i = 0; i < 7; i += 1) {
+    for (let i = 0; i < 4; i += 1) {
       const layer = new THREE.Mesh(badgePlane, sideMat);
       layer.position.z = -0.16 + i * 0.026;
       layer.scale.setScalar(1 - i * 0.012);
@@ -102,13 +89,11 @@
       side: THREE.DoubleSide,
       metalness: 0.32,
       roughness: 0.05,
-      clearcoat: 1,
+      clearcoat: 0.6,
       clearcoatRoughness: 0.04,
       iridescence: 1,
       iridescenceIOR: 1.62,
-      iridescenceThicknessRange: [180, 700],
-      transmission: 0.18,
-      thickness: 0.28
+      iridescenceThicknessRange: [180, 700]
     });
     const face = new THREE.Mesh(badgePlane, faceMat);
     face.position.z = 0.05;
@@ -131,7 +116,7 @@
     group.add(back);
 
     const halo = new THREE.Mesh(
-      new THREE.RingGeometry(0.68, 0.92, 64),
+      new THREE.RingGeometry(0.68, 0.92, 32),
       new THREE.MeshBasicMaterial({
         color: new THREE.Color('#d9a8ff'),
         transparent: true,
@@ -194,9 +179,14 @@
   }
 
   function tick() {
+    rafId = requestAnimationFrame(tick);
+    if (document.hidden) return;
+    frameCount++;
     const t = performance.now() * 0.001;
     instances.forEach((state) => {
       if (!state.visible) return;
+      // Throttle à ~30fps quand pas survolé (rendu un frame sur deux)
+      if (!state.hover && frameCount % 2 !== 0) return;
       state.rotX += (state.targetX - state.rotX) * 0.08;
       state.rotY += (state.targetY - state.rotY) * 0.08;
       state.group.rotation.x = state.rotX + (state.hover ? Math.sin(t * 1.4) * 0.02 : 0);
@@ -209,7 +199,6 @@
       state.rim.intensity = 1.65 + glint * 1.05 + (state.hover ? 0.24 : 0);
       state.renderer.render(state.scene, state.camera);
     });
-    rafId = requestAnimationFrame(tick);
   }
 
   function scanAndInit() {
