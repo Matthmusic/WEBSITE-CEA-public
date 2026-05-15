@@ -5,4 +5,4 @@ Allow: /
 Disallow: /sounds/
 Disallow: *.mp3$
 
-Sitemap: https://www.conception-ea.fr/sitemap.xml
+Sitemap: https://www.cea-ingenierie.fr/sitemap.xml
