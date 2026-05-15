@@ -295,5 +295,23 @@
     "weight": 6,
     "certified": false,
     "certifiedDescription": ""
+  },
+  {
+    "name": "SMEG",
+    "logo": "https://www.smeg.mc/medias/_preview/logo.png",
+    "weight": 7,
+    "slug": "smeg",
+    "certified": false,
+    "certifiedDescription": "",
+    "id": 1778838515543
+  },
+  {
+    "name": "Piazza",
+    "logo": "images/references/partners/i-1778838691323.jpg",
+    "weight": 1,
+    "slug": "piazza",
+    "certified": false,
+    "certifiedDescription": "",
+    "id": 1778838709907
   }
 ]
