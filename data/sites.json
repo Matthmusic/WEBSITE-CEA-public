@@ -100,6 +100,16 @@
     "longitude": 6.1598358
   },
   {
+    "id": 1776853774599,
+    "slug": "aeroport-la-reunion-roland-garros",
+    "name": "Aéroport La Réunion Roland Garros",
+    "partnerId": "1776853741013",
+    "category": "",
+    "address": "Aéroport de la Réunion Roland-Garros, 74, Avenue Roland Garros, Rivière des Pluies, Sainte-Marie, Saint-Denis, La Réunion, 97438, France",
+    "latitude": -20.8902226,
+    "longitude": 55.5173184
+  },
+  {
     "id": 1776342303371,
     "slug": "c-c-i-port-de-nice",
     "name": "C.C.I Port de Nice",
@@ -148,6 +158,16 @@
     "address": "147 Bd du Mercantour, 06201 Nice",
     "latitude": 43.6759275,
     "longitude": 7.2006648
+  },
+  {
+    "id": 1776667479553,
+    "slug": "grand-hotel-du-cap-ferrat",
+    "name": "Grand Hotel du Cap Ferrat",
+    "partnerId": "1776667450033",
+    "category": "",
+    "address": "Grand Hôtel du Cap Ferrat, Avenue Dehouve - Voyenne, Saint-Jean-Cap-Ferrat, Nice, Alpes-Maritimes, Provence-Alpes-Côte d'Azur, France métropolitaine, 06230, France",
+    "latitude": 43.6769597,
+    "longitude": 7.3315163
   },
   {
     "id": 1776342303380,
@@ -200,6 +220,16 @@
     "longitude": 7.1369618
   },
   {
+    "id": 1776851599993,
+    "slug": "port-de-nice",
+    "name": "Port de Nice",
+    "partnerId": "6",
+    "category": "parking",
+    "address": "Nice Lympia, 6, Quai Papacino, Le Port, Carabacel, Nice, Alpes-Maritimes, Provence-Alpes-Côte d'Azur, France métropolitaine, 06300, France",
+    "latitude": 43.6976061,
+    "longitude": 7.2834978
+  },
+  {
     "id": 1776342303377,
     "slug": "tgbt-cheiron",
     "name": "TGBT Cheiron",
@@ -220,13 +250,13 @@
     "longitude": 7.0147795
   },
   {
-    "id": 1776667479553,
-    "slug": "grand-hotel-du-cap-ferrat",
-    "name": "Grand Hotel du Cap Ferrat",
-    "partnerId": "1776667450033",
-    "category": "",
-    "address": "Grand Hôtel du Cap Ferrat, Avenue Dehouve - Voyenne, Saint-Jean-Cap-Ferrat, Nice, Alpes-Maritimes, Provence-Alpes-Côte d'Azur, France métropolitaine, 06230, France",
-    "latitude": 43.6769597,
-    "longitude": 7.3315163
+    "id": 1777583344884,
+    "slug": "aeroport-du-luxembourg",
+    "name": "Aeroport du Luxembourg",
+    "partnerId": "1777583288814",
+    "category": "aeroportuaire",
+    "address": "Antibes, Grasse, Alpes-Maritimes, Provence-Alpes-Côte d'Azur, France métropolitaine, France",
+    "latitude": 43.5813878,
+    "longitude": 7.1236966
   }
 ]

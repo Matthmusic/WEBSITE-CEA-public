@@ -1,26 +1,77 @@
 {
-  "subtitle": "Trois associés, une vision commune",
+  "subtitle": "",
   "members": [
     {
       "id": "frederic-menardi",
       "firstName": "Frédéric",
-      "lastName": "Menardi",
-      "role": "Spécialiste HTA / HTB",
-      "description": "Expert en conception de systèmes électriques industriels avec plus de 20 ans d'expérience dans l'Aéroportuaire."
+      "lastName": "MENARDI",
+      "role": "Co-gérant",
+      "description": "Expert en conception de systèmes électriques HTA / BT avec plus de 25 ans d'expérience dans l'Aéroportuaire.",
+      "photo": "images/team/frederic-menardi.webp"
     },
     {
       "id": "jerome-voltarel",
       "firstName": "Jérôme",
-      "lastName": "Voltarel",
-      "role": "Spécialiste HT/BT",
-      "description": "Expert en conception de systèmes électriques pour le secteur industriel."
+      "lastName": "VOLTAREL",
+      "role": "Co-gérant",
+      "description": "Expert en conception de systèmes électriques CFO et CFA pour le secteur industriel et tertiaire.",
+      "photo": "images/team/jerome-voltarel.webp"
     },
     {
       "id": "laurent-marques",
       "firstName": "Laurent",
-      "lastName": "Marques",
-      "role": "Spécialiste HT/BT/CFA",
-      "description": "Spécialisé dans la gestion de projets complexes dans les secteurs public et tertiaire."
+      "lastName": "MARQUES",
+      "role": "Co-gérant",
+      "description": "Spécialisé dans la gestion de projets complexes dans les secteurs public et tertiaire.",
+      "photo": "images/team/laurent-marques.webp"
+    },
+    {
+      "id": "member-1776841010335",
+      "firstName": "William",
+      "lastName": "CRESSON",
+      "role": "Chargé d'études",
+      "description": "",
+      "photo": "images/team/member-1776841010335.webp"
+    },
+    {
+      "id": "member-1776841027053",
+      "firstName": "Sakina",
+      "lastName": "BEHNED",
+      "role": "Assistante de direction",
+      "description": "",
+      "photo": "images/team/member-1776841027053.webp"
+    },
+    {
+      "id": "member-1776841046568",
+      "firstName": "Matthieu",
+      "lastName": "MAUREL",
+      "role": "Chargé d'études",
+      "description": "",
+      "photo": "images/team/member-1776841046568.webp"
+    },
+    {
+      "id": "member-1776854426768",
+      "firstName": "Sandro",
+      "lastName": "MENARDI",
+      "role": "Alternant Ingénieur",
+      "description": "",
+      "photo": "images/team/member-1776854426768.webp"
+    },
+    {
+      "id": "member-1776854465904",
+      "firstName": "Mattéo",
+      "lastName": "VOLTAREL",
+      "role": "Alternant Projeteur",
+      "description": "",
+      "photo": "images/team/member-1776854465904.webp"
+    },
+    {
+      "id": "member-1777985171167",
+      "firstName": "Dominique",
+      "lastName": "BICHON",
+      "role": "Dessinateur",
+      "description": "",
+      "photo": "images/team/member-1777985171167.webp"
     }
   ]
 }
