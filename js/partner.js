@@ -1,6 +1,5 @@
 const qp = new URLSearchParams(location.search);
 const partnerKey = qp.get('partner') || '';
-const shortAddr = (a) => { if (!a) return ''; const parts = a.split(',').map(s => s.trim()).filter(Boolean); return parts.slice(0, 2).join(', '); };
 
 (async function init() {
   const [partners, sites, references] = await Promise.all([
@@ -9,13 +8,16 @@ const shortAddr = (a) => { if (!a) return ''; const parts = a.split(',').map(s =
     fetch('data/references.json').then((r) => r.ok ? r.json() : {})
   ]);
 
-  const partner = (Array.isArray(partners) ? partners : []).find((p) => String(p.slug || '').trim() === partnerKey || String(p.id) === partnerKey);
+  const partner = (Array.isArray(partners) ? partners : []).find(
+    (p) => String(p.slug || '').trim() === partnerKey || String(p.id) === partnerKey
+  );
 
   document.getElementById('partnerTitle').textContent = partner?.name || 'Partenaire';
   if (partner?.logo) {
     const box = document.getElementById('partnerLogoBox');
     const img = document.getElementById('partnerLogoImg');
-    img.src = partner.logo; img.alt = partner.name;
+    img.src = partner.logo;
+    img.alt = partner.name;
     if (partner.certified) {
       box.insertAdjacentHTML(
         'beforeend',
@@ -32,6 +34,7 @@ const shortAddr = (a) => { if (!a) return ''; const parts = a.split(',').map(s =
     })
   );
   const siteById = new Map((Array.isArray(sites) ? sites : []).map((s) => [String(s.id), s]));
+  const partnerById = new Map((Array.isArray(partners) ? partners : []).map((p) => [String(p.id), p]));
 
   const partnerRefs = flatRefs
     .filter((r) => String(r.partnerId || '') === String(partner?.id || ''))
@@ -44,29 +47,19 @@ const shortAddr = (a) => { if (!a) return ''; const parts = a.split(',').map(s =
   }
 
   grid.innerHTML = partnerRefs.map((r) => {
-    const images = Array.isArray(r.images) && r.images.length ? r.images : (r.imageUrl ? [r.imageUrl] : []);
-    const image = images[0] || '';
-    const st = statusOf(r.endDate);
     const site = siteById.get(String(r.siteId || ''));
-    const budget = r.showBudget ? budgetShort(r.budgetAmount) : '';
-    const dataGallery = images.length ? ` data-gallery="${JSON.stringify(images).replace(/"/g, '&quot;')}"` : '';
-    return `
-      <article class="ref-card reference-detail-card"${dataGallery}>
-        <div class="ref-image">
-          <div class="project-status-badge project-status-badge--${st.key}">${esc(st.label)}</div>
-          ${image ? `<img src="${esc(image)}" alt="${esc(r.title)}" class="ref-img">` : ''}
-          <div class="image-placeholder"><i class="fas fa-image"></i></div>
-          ${images.length > 1 ? `<div class="photo-count-badge"><i class="fas fa-images"></i> ${images.length}</div>` : ''}
-        </div>
-        <div class="ref-content">
-          <span class="reference-category-chip">${esc(categoryLabels[r.category] || r.category)}</span>
-          ${site ? `<div class="reference-partner">${esc(site.name)}</div>` : ''}
-          <h4>${esc(r.title)}</h4>
-          <p>${esc(r.description || '')}</p>
-          ${budget ? `<div class="reference-date"><i class="fas fa-money-bill-wave"></i> ${esc(budget)}</div>` : ''}
-        </div>
-      </article>`;
+    const refPartner = partnerById.get(String(r.partnerId || ''));
+    return RefCard.buildHTML(r, refPartner, site);
   }).join('');
+
+  // Lien vers la fiche projet
+  grid.querySelectorAll('.ref-content[data-project-url]').forEach((panel) => {
+    panel.addEventListener('click', (e) => {
+      if (e.target.closest('a, button')) return;
+      const url = panel.getAttribute('data-project-url');
+      if (url) window.location.href = url;
+    });
+  });
 
   // Galerie photo
   const modal = document.getElementById('gallery-modal');
@@ -79,10 +72,15 @@ const shortAddr = (a) => { if (!a) return ''; const parts = a.split(',').map(s =
   modal.querySelector('.gallery-close').addEventListener('click', close);
   modal.querySelector('.gallery-prev').addEventListener('click', () => open((idx - 1 + items.length) % items.length));
   modal.querySelector('.gallery-next').addEventListener('click', () => open((idx + 1) % items.length));
-  document.addEventListener('keydown', (e) => { if (!modal.classList.contains('visible')) return; if (e.key === 'Escape') close(); if (e.key === 'ArrowLeft') modal.querySelector('.gallery-prev').click(); if (e.key === 'ArrowRight') modal.querySelector('.gallery-next').click(); });
+  document.addEventListener('keydown', (e) => {
+    if (!modal.classList.contains('visible')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') modal.querySelector('.gallery-prev').click();
+    if (e.key === 'ArrowRight') modal.querySelector('.gallery-next').click();
+  });
   document.addEventListener('click', (e) => {
     const card = e.target.closest('.reference-detail-card[data-gallery]');
-    if (!card || e.target.closest('a,button')) return;
+    if (!card || e.target.closest('a, button, .ref-content[data-project-url]')) return;
     try { items = JSON.parse(card.getAttribute('data-gallery') || '[]'); } catch { items = []; }
     if (items.length) open(0);
   });

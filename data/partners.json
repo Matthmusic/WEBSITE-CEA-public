@@ -297,21 +297,21 @@
     "certifiedDescription": ""
   },
   {
+    "id": 1778838515543,
     "name": "SMEG",
     "logo": "https://www.smeg.mc/medias/_preview/logo.png",
-    "weight": 7,
     "slug": "smeg",
+    "weight": 7,
     "certified": false,
-    "certifiedDescription": "",
-    "id": 1778838515543
+    "certifiedDescription": ""
   },
   {
+    "id": 1778838709907,
     "name": "Piazza",
     "logo": "images/references/partners/i-1778838691323.jpg",
-    "weight": 1,
     "slug": "piazza",
+    "weight": 1,
     "certified": false,
-    "certifiedDescription": "",
-    "id": 1778838709907
+    "certifiedDescription": ""
   }
 ]
