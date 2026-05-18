@@ -4148,6 +4148,15 @@ section[id] {
 
 .references .section-header .section-subtitle {
     margin: 0 auto;
+    white-space: nowrap;
+    max-width: none;
+}
+
+@media (max-width: 900px) {
+    .references .section-header .section-subtitle {
+        white-space: normal;
+        max-width: 720px;
+    }
 }
 
 .references-categories {
@@ -4165,7 +4174,7 @@ section[id] {
 
 .references-map {
     width: 100%;
-    height: 774px;
+    height: 874px;
     border-radius: 20px;
     border: 1px solid var(--border-color);
     box-shadow: var(--glass-shadow);
@@ -6054,7 +6063,7 @@ section[id]:not(#accueil):not(#domaines) {
     }
 
     .references-map {
-        height: 600px;
+        height: 700px;
     }
 
     .trust-logo-card {
@@ -6175,7 +6184,7 @@ section[id]:not(#accueil):not(#domaines) {
     }
 
     .references-map {
-        height: 504px !important;
+        height: 604px !important;
     }
 
     .references-map-panel {
