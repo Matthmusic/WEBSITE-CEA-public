@@ -173,8 +173,8 @@
       "imageUrl": "https://www.chambery-business-airport.com/sites/default/files/inline-images/contact-et-acces.jpg",
       "id": 1776259606639,
       "updatedAt": "2026-05-06T06:48:09.468Z",
-      "latitude": null,
-      "longitude": null
+      "latitude": 0,
+      "longitude": 0
     },
     {
       "category": "aeroportuaire",
@@ -194,7 +194,29 @@
       ],
       "imageUrl": "https://www.franceguide.info/fr/wp-content/uploads/sites/20/aeroport-sympa.jpg",
       "id": "1701000004",
-      "updatedAt": "2026-05-15T12:01:52.958Z"
+      "updatedAt": "2026-05-15T12:01:52.958Z",
+      "latitude": null,
+      "longitude": null
+    },
+    {
+      "category": "aeroportuaire",
+      "title": "Déploiement de solutions PCA",
+      "description": "AUDIT - Déploiement de PCA ",
+      "partnerId": "1777583288814",
+      "siteId": "1777583344884",
+      "weight": 6,
+      "date": "2026-02",
+      "endDate": "",
+      "address": "ibis budget Luxembourg Aéroport, Route de Trèves, Gréngewald, Niederanven, Canton Luxembourg, 2632, Luxembourg",
+      "budgetAmount": null,
+      "budgetCurrency": "EUR",
+      "showBudget": false,
+      "images": [
+        "images/references/aeroportuaire/Luxairport-smartcities-1400x700.webp"
+      ],
+      "imageUrl": "images/references/aeroportuaire/Luxairport-smartcities-1400x700.webp",
+      "id": 1779094381499,
+      "updatedAt": "2026-05-18T09:18:49.050Z"
     }
   ],
   "portuaire": [
@@ -353,8 +375,8 @@
       "imageUrl": "https://static.wixstatic.com/media/d36b30_c6bb33164d89411f883bc33b51832a69~mv2.jpg/v1/fill/w_1000,h_707,al_c,q_85,usm_0.66_1.00_0.01/d36b30_c6bb33164d89411f883bc33b51832a69~mv2.jpg",
       "id": 1776419953426,
       "updatedAt": "2026-05-06T06:48:16.795Z",
-      "latitude": null,
-      "longitude": null
+      "latitude": 0,
+      "longitude": 0
     },
     {
       "category": "public",
@@ -375,8 +397,8 @@
       "imageUrl": "https://www.premices-amo.fr/media/pages/references/extension-des-archives-departementales-creation-d-un-data-center-et-d-un-parking-souterrain-au-sein-du-cadam-nice/05d044dfbd-1738334927/pxl_20241029_095652449-1800x.webp",
       "id": "1765183150373",
       "updatedAt": "2026-05-06T06:48:28.809Z",
-      "latitude": null,
-      "longitude": null
+      "latitude": 0,
+      "longitude": 0
     }
   ],
   "hotellerie": [
