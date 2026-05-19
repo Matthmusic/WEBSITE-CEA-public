@@ -1146,6 +1146,18 @@ function updateTrustMetrics({ partnersCount = null, sectorsCount = null } = {}) 
     }
 }
 
+function updateProjectStat(total) {
+    const statEl = document.querySelector('.stat-card--projets .stat-number');
+    if (statEl) {
+        statEl.setAttribute('data-target', String(total));
+    }
+    const narEl = document.querySelector('.stat-num-inline[data-stat-target]');
+    if (narEl) {
+        narEl.dataset.statTarget = String(total);
+        if (narEl._narTarget !== undefined) narEl._narTarget = total;
+    }
+}
+
 function renderCertifiedPartners(partners, partnerIdsWithProjects = new Set()) {
     const block = document.getElementById('certifiedPartnersBlock');
     const grid = document.getElementById('certifiedPartnersGrid');
@@ -1384,13 +1396,16 @@ async function loadTrustShowcase() {
             const referencesPayload = await referencesResponse.json();
             if (referencesPayload && typeof referencesPayload === 'object') {
                 sectorsCount = Object.keys(referencesPayload).length;
+                let totalProjects = 0;
                 Object.keys(referencesPayload).forEach((category) => {
                     const refs = Array.isArray(referencesPayload[category]) ? referencesPayload[category] : [];
+                    totalProjects += refs.length;
                     refs.forEach((reference) => {
                         const partnerId = String(reference?.partnerId || '').trim();
                         if (partnerId) partnerIdsWithProjects.add(partnerId);
                     });
                 });
+                updateProjectStat(totalProjects);
             }
         }
 
