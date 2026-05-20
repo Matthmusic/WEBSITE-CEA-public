@@ -133,7 +133,7 @@ class NavigationManager {
     }
 
     updateActiveNavLink() {
-        const sectionNavMap = { 'references': 'clients' };
+        const sectionNavMap = { 'clients': 'references.html', 'references': 'references.html' };
         const dropdownSections = new Set(['expertise', 'equipe', 'moyens-techniques']);
         const sections = Array.from(document.querySelectorAll('section[id]')).filter(s => s.offsetHeight > 0);
         const scrollPos = window.scrollY + window.innerHeight * 0.5;
@@ -154,7 +154,8 @@ class NavigationManager {
                     document.querySelector('.nav-link--dropdown')?.classList.add('active');
                 } else {
                     const mappedId = sectionNavMap[section.id] || section.id;
-                    document.querySelector(`.nav-link[href="#${mappedId}"]`)?.classList.add('active');
+                    const href = mappedId.includes('.') ? mappedId : `#${mappedId}`;
+                    document.querySelector(`.nav-link[href="${href}"]`)?.classList.add('active');
                 }
             }
         });
