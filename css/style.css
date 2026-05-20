@@ -2410,11 +2410,40 @@ section[id] {
 
 @media (max-width: 768px) {
   .footer-content {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .footer-content > div:nth-child(1) { order: 2; }
+  .footer-content > div:nth-child(2) { order: 1; }
+  .footer-content > div:nth-child(3) { order: 3; }
+  .footer-section {
+    text-align: center;
+  }
+  .footer-section h3 {
+    text-align: center;
   }
   .footer-section--center {
-    align-items: flex-start;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-section ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-opqibi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer-certif-num {
+    text-align: center;
   }
 }
 
