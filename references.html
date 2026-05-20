@@ -27,18 +27,28 @@
                 <li class="nav-item"><a href="index.html#domaines" class="nav-link">Domaines</a></li>
                 <li class="nav-item"><a href="index.html#missions" class="nav-link">Missions</a></li>
                 <li class="nav-item"><a href="references.html" class="nav-link active">Références</a></li>
-                <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
-                <li class="nav-item">
-                    <button class="theme-toggle" aria-label="Changer de thème">
-                        <i class="fas fa-sun"></i>
+                <li class="nav-item nav-item--dropdown" id="entreprise-dropdown">
+                    <button class="nav-link nav-link--dropdown" aria-expanded="false" aria-haspopup="true">
+                        Notre entreprise <i class="fas fa-chevron-down nav-chevron" aria-hidden="true"></i>
                     </button>
+                    <ul class="nav-dropdown" role="menu">
+                        <li role="none"><a href="index.html#expertise" class="nav-dropdown-link" role="menuitem">Notre expertise</a></li>
+                        <li role="none"><a href="index.html#equipe" class="nav-dropdown-link" role="menuitem">Notre équipe</a></li>
+                        <li role="none"><a href="index.html#moyens-techniques" class="nav-dropdown-link" role="menuitem">Moyens &amp; outils</a></li>
+                    </ul>
                 </li>
+                <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
             </ul>
-            <button class="hamburger" aria-controls="nav-menu-list" aria-expanded="false">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
+            <div class="nav-controls">
+                <button class="theme-toggle" aria-label="Changer de thème">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="hamburger" aria-controls="nav-menu-list" aria-expanded="false" aria-label="Menu de navigation">
+                    <span class="bar" aria-hidden="true"></span>
+                    <span class="bar" aria-hidden="true"></span>
+                    <span class="bar" aria-hidden="true"></span>
+                </button>
+            </div>
         </div>
     </nav>
 
