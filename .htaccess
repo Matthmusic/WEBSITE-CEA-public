@@ -1,3 +1,20 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Redirection des anciennes URLs indexées par Google avec le mauvais paramètre
+    # (project.html?id=...) vers le paramètre réellement utilisé par le site (?project=...)
+    RewriteCond %{QUERY_STRING} ^id=(.+)$
+    RewriteRule ^project\.html$ /project.html?project=%1 [R=301,L]
+
+    # Force HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Force www (hôte canonique déclaré dans les balises canonical / robots.txt / sitemap)
+    RewriteCond %{HTTP_HOST} ^cea-ingenierie\.fr$ [NC]
+    RewriteRule ^ https://www.cea-ingenierie.fr%{REQUEST_URI} [L,R=301]
+</IfModule>
+
 <IfModule mod_headers.c>
     # Charset
     AddDefaultCharset UTF-8
